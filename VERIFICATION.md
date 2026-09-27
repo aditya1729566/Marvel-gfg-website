@@ -20,6 +20,8 @@ The screenshot-requested revision removes the intro/finale gems and orbit lines,
 
 The first native-model review captured six chapters at 1440×1000, 834×1112 and 390×844, eleven checkpoints on all four connectors, and armor views, with no page/console errors. Latest captures belong in `../rebuild-review/`; `../current-build-audit/` deliberately records the rejected visual baseline.
 
+The final cursor revision was rendered again into `../pointer-review/`: clean intro/finale rings and mission layouts at desktop, tablet and mobile, actual disassembly/part isolation/drag rotation, mobile pointer selection and the scrolled mission timeline. These captures have no page/console errors. The selected part rotates about its own center rather than orbiting out of view, and hidden armor no longer intercepts empty-space clicks.
+
 Review caught and fixed shader-prefix compilation errors, blocked portal/finale sightlines, frame-dependent assembly delay and slow explicit anchor navigation under software WebGL. Error assertions remain intact. The full six-world functional test has a 90-second software-rendering budget, not an FPS guarantee.
 
 ## Current limits
