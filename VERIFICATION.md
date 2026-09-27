@@ -14,7 +14,7 @@ The irregular forming portal, tapered GPU spark trails and warm lights reveal th
 
 ## Current checks
 
-ESLint, TypeScript and the optimized Webpack production build pass. All **19 production Playwright regression cases are verified** across the full run and focused recheck. The full run passed eighteen cases and caught low-contrast inactive chapter numbers on the new desktop dossier background. After making those numbers opaque and rebuilding, the failing desktop six-chapter accessibility case and the extended Strange interlude accessibility case both passed in a focused two-test run. No failed case remains unverified and no error/accessibility assertions were removed.
+ESLint, TypeScript and the optimized Webpack production build pass. All **20 production Playwright regression cases pass in the final full run** (7.1 minutes), including the new portal-arrival blend test. The prior theme revision's nineteen cases remain covered; its low-contrast inactive chapter numbers were corrected before this run. No error/accessibility assertions were removed.
 
 Coverage includes actual mesh-click disassembly, exposed chest-plate picking, isolated cursor rotation, empty-space return, keyboard selection/rotation/reassembly, all six worlds, all cinematic connectors, the dedicated reversible Strange interval, reduced motion, WebGL fallback, navigation and responsive/accessibility checks. The checks cover 320, 390, 768, 1024 and 1440px; Axe scans cover all six chapters at 390 and 1440px plus the active reduced-motion Strange interlude.
 
@@ -31,6 +31,12 @@ Review caught and fixed shader-prefix compilation errors, blocked portal/finale 
 The Marvel-theme revision replaces the briefing and FAQ with opaque Avengers dossier/field-manual surfaces, red framing, restrained halftone backgrounds and readable pale body text. Event facts remain unchanged. Stark and gamma resting scenes are simple steel/concrete bays with local cyan/green lighting; idle haze, overlapping frames and stray adjacent-world geometry were removed. Gamma rubble and cracks appear only during the explicit impact interaction.
 
 New visual captures in `outputs/marvel-theme-review/` cover 1440×1000, 834×1112 and 390×844, both cleaned hero scenes, briefing/FAQ and five interlude checkpoints. The focused refinement in `outputs/marvel-theme-final/` covers desktop, portrait, 844×390 landscape, scrolled mission facts and a separate portrait reduced-motion portal. Both runs report zero horizontal overflow and no browser/console errors. Inspection corrected an offset FAQ card, landscape briefing clipping, premature destination visibility and stale reduced-motion hall visibility. Fixed navigation has an opaque reading-page surface so scrolled facts do not compete with navigation labels.
+
+## Portal-to-briefing arrival refinement
+
+The final portal opening and camera entry now begin earlier and ease over a longer shared interval. Strange fades away before the camera reaches his image plane; the ring remains mounted while its existing fade completes. The mission dossier blends in before the chapter boundary with a restrained 18px settling motion instead of appearing only after the crossing. The pre-arrival panel is inert, and its original section height is reserved so portrait content and the following registration section do not jump. Native scroll and committed motion-preference changes refresh the same master journey state; reduced motion bypasses the blend.
+
+The new production regression passes on 1440px desktop and 390px portrait: three successive portal positions produce increasing, partial briefing opacity, the preview is fixed and inert, registration offsets remain within 2px, and the completed dossier becomes visible. Switching to reduced motion keeps the preview disabled and the skip usable. The visual refinement was captured at 1440×1000, 390×844 and 844×390, including forward and reverse crossings, in the workspace's `outputs/portal-arrival-review/`. All captures report zero horizontal overflow and no browser/console errors. Hero scenes, content, controls and asset sources are unchanged.
 
 ## Current limits
 

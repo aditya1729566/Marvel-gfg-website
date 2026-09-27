@@ -2,7 +2,7 @@ import { useMemo, useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
-import type { JourneyRef } from "./state";
+import { smooth, type JourneyRef } from "./state";
 import { useJourneyTime } from "./useJourneyTime";
 
 export const art = {
@@ -103,7 +103,7 @@ export function CinematicHero({ name, state, height=8, lightColor="#84e5ec", reg
   const charge=name==="iron" ? .25+(s.action===1?.5:0)+(s.motion?.reactorCharge??0)*.8+(s.motion?.blast??0)*1.4 : name==="strange" ? .45 : .22+hit*.5;
   const chapter={iron:1,spider:2,hulk:3,strange:3.5}[name];
   const depart=name==="hulk"?.49:.58,span=name==="hulk"?.08:.2;
-  const leave=s.reduced||name==="strange"?1:1-Math.max(0,Math.min(1,(s.progress-chapter-depart)/span));
+  const leave=s.reduced?1:name==="strange"?1-smooth(3.82,3.96,s.progress):1-Math.max(0,Math.min(1,(s.progress-chapter-depart)/span));
   materials.current.forEach(m=>{if(m){m.uniforms.light.value=charge;m.uniforms.opacity.value=onlyFront?1:leave*leave; m.uniforms.pointer.value.set(...(quiet?[0,0]:s.pointer));m.uniforms.gesture.value=name==="strange"?(s.reduced?1:s.motion?.strangeGesture??0):0;m.uniforms.draw.value=name==="strange"?(s.reduced?1:s.motion?.portal??0):0;}});
   if(front.current)front.current.position.z=.24+hit*.7;
  });

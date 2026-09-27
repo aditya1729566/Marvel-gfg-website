@@ -1861,6 +1861,12 @@ summary:focus-visible {
 /* Avengers dossier: recognizable comic-film framing, quiet opaque reading areas. */
 .mission { --accent: #ff8585; }
 .mission .chapter-shell { background: #0b0f17; }
+.mission .chapter-shell {
+  transform: translateY(calc((1 - var(--copy-opacity, 0)) * 18px));
+  transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+}
+.mission[data-arriving="true"] .chapter-shell { position: fixed; inset: 0; }
+.mission[data-arriving="true"] { min-height: var(--mission-layout-height); }
 .mission .chapter-grid { isolation: isolate; }
 .mission .chapter-grid::before {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: -1;
@@ -1944,6 +1950,7 @@ summary:focus-visible {
  .strange-copy h2 { font-size: 66px; }
 }
 @media (max-width:600px) {
+ .mission[data-arriving="true"] .chapter-shell { bottom: auto; }
  .mission .mission-heading { position: static; width: 100%; }
  .mission .mission-heading h2 { font-size: 16vw; }
  .dossier-stamp { margin-bottom: 23px; }
@@ -1974,6 +1981,7 @@ summary:focus-visible {
 @media (prefers-reduced-motion:reduce) {
  .strange-interlude { height: 115svh; }
  .strange-shell { transition: none; }
+ .mission .chapter-shell { transition: none; transform: none; }
 }
 @media (min-width:601px) and (max-height:700px) {
  .mission { height: 950px; }

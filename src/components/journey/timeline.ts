@@ -25,7 +25,7 @@ export function createMasterTimeline(motion: CinematicMotion) {
     .to(motion, { strangeGesture: 1, duration: .12, ease: "power2.inOut" }, 3.52)
     .to(motion, { portal: 1, duration: 0.2, ease: "none" }, 3.6)
     .addLabel("strange-portal", 3.67)
-    .to(motion, { portalOpen: 1, duration: 0.12, ease: "power3.inOut" }, 3.84)
+    .to(motion, { portalOpen: 1, duration: 0.18, ease: "power2.inOut" }, 3.82)
     .addLabel("mission", 4)
     .to(motion, { portal: 0, duration: 0.14, ease: "power2.out" }, 4)
     .to(motion, { converge: 1, duration: 0.4, ease: "power2.inOut" }, 4.6)

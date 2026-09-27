@@ -25,6 +25,7 @@ import {
   armorChanged,
   inspectArmor,
   backFromArmor,
+  smooth,
   type JourneyState,
 } from "./journey/state";
 
@@ -85,6 +86,7 @@ export default function Experience() {
     state.current.reduced = reduced;
     state.current.paused = paused || document.hidden;
     notify();
+    window.dispatchEvent(new Event("journey-layout"));
     const visibility = () => {
       state.current.paused = paused || document.hidden;
       notify();
@@ -124,15 +126,21 @@ export default function Experience() {
       const portalPhase = Math.max(0, Math.min(1, (y - portalSection.offsetTop) / Math.max(1, offsets[4] - portalSection.offsetTop)));
       const worldPhase = index === 3 ? (inPortal ? .52 + portalPhase * .48 : ((y - offsets[3]) / Math.max(1, portalSection.offsetTop - offsets[3])) * .52) : phase;
       state.current.targetProgress = index + worldPhase;
+      const arriving = inPortal && !state.current.reduced && worldPhase > .9;
       sections.forEach((section, i) => {
-        const current = i === index && !inPortal;
+        const previewMission = i === 4 && arriving;
+        const current = (i === index && !inPortal) || previewMission;
         section.dataset.current = String(current);
+        if (i === 4) {
+          if (previewMission && section.dataset.arriving !== "true") section.style.setProperty("--mission-layout-height", `${section.offsetHeight}px`);
+          section.dataset.arriving = String(previewMission);
+        }
         const travel = !state.current.reduced && i < 4;
-        const opacity = current ? (travel ? Math.max(0, 1 - Math.max(0, worldPhase - 0.48) / 0.12) : 1) : 0;
+        const opacity = previewMission ? smooth(.9, 1, worldPhase) : current ? (travel ? Math.max(0, 1 - Math.max(0, worldPhase - 0.48) / 0.12) : 1) : 0;
         section.style.setProperty("--copy-opacity", String(opacity));
         section.style.setProperty("--copy-shift", `${travel ? Math.max(0, phase - 0.48) * -100 : 0}px`);
         // Inactive fixed panels must never intercept pointer/keyboard navigation.
-        section.querySelector<HTMLElement>(".chapter-shell")!.inert = !current || opacity === 0;
+        section.querySelector<HTMLElement>(".chapter-shell")!.inert = !current || opacity === 0 || previewMission;
       });
       portalSection.dataset.current = String(inPortal);
       portalSection.style.setProperty("--portal-copy-opacity", String(state.current.reduced ? 1 : 1 - Math.max(0, portalPhase - .58) / .18));
@@ -173,7 +181,11 @@ export default function Experience() {
       if (state.current.reduced || state.current.paused) notify();
     };
     window.addEventListener("pointermove", pointer, { passive: true });
+    // Native scroll remains authoritative even if ScrollTrigger's normalized
+    // progress is temporarily clamped after a deep link or layout refresh.
+    window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", refresh, { passive: true });
+    window.addEventListener("journey-layout", refresh);
     // Media preferences and content/font changes can resize chapters without
     // resizing the viewport. Keep the cached scroll boundaries in sync.
     const layoutObserver = new ResizeObserver(refresh);
@@ -190,7 +202,9 @@ export default function Experience() {
       journey.score = undefined;
       cancelAnimationFrame(deepLink);
       window.removeEventListener("pointermove", pointer);
+      window.removeEventListener("scroll", update);
       window.removeEventListener("resize", refresh);
+      window.removeEventListener("journey-layout", refresh);
       layoutObserver.disconnect();
     };
   }, []);

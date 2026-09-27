@@ -50,6 +50,45 @@ test("Strange has a dedicated, reversible portal interval with an accessible ski
  expect(errors).toEqual([]);
 });
 
+test("portal arrival blends the briefing before the boundary without shifting mobile sections",async({page})=>{
+ test.setTimeout(120000);
+ const errors:string[]=[];page.on("pageerror",e=>errors.push(e.message));page.on("console",m=>{if(m.type()==="error")errors.push(m.text());});
+ await page.emulateMedia({reducedMotion:"no-preference"});
+ for(const width of [1440,390]){
+  await page.setViewportSize({width,height:width===390?844:1000});
+  await page.goto("/#doctor-strange");
+  await expect(page.locator(".journey-stage")).toHaveAttribute("data-ready","true",{timeout:60000});
+  await expect(page.locator(".experience")).toHaveAttribute("data-reduced","false");
+  await expect(page.locator(".experience")).toHaveAttribute("data-passage","strange");
+  const offset=await page.locator("#registration").evaluate(el=>(el as HTMLElement).offsetTop);
+  let previous=0;
+  for(const phase of [.82,.9,.97]){
+   const delta=await page.evaluate(phase=>{const s=document.getElementById("doctor-strange")!;return s.offsetTop+s.offsetHeight*phase-window.scrollY;},phase);
+   await page.mouse.wheel(0,delta);
+   await expect(page.locator("#mission"),`Arrival at ${width}px, phase ${phase}`).toHaveAttribute("data-arriving","true");
+   await expect.poll(()=>page.locator("#mission").evaluate(el=>Number((el as HTMLElement).style.getPropertyValue("--copy-opacity")))).toBeGreaterThan(previous);
+   const reveal=await page.locator("#mission").evaluate(el=>Number((el as HTMLElement).style.getPropertyValue("--copy-opacity")));
+   expect(reveal).toBeGreaterThan(previous);expect(reveal).toBeLessThan(1);previous=reveal;
+   expect(await page.locator("#mission .chapter-shell").evaluate(el=>getComputedStyle(el).position)).toBe("fixed");
+   expect(await page.locator("#mission .chapter-shell").evaluate(el=>(el as HTMLElement).inert)).toBe(true);
+   expect(Math.abs((await page.locator("#registration").evaluate(el=>(el as HTMLElement).offsetTop))-offset)).toBeLessThan(2);
+  }
+  await page.evaluate(()=>document.getElementById("mission")!.scrollIntoView({behavior:"instant"}));
+  await expect(page.locator("#mission")).toHaveAttribute("data-arriving","false");
+  await expect(page.locator(".experience")).toHaveAttribute("data-world","4");
+  await expect(page.locator(".dossier-header")).toBeVisible();
+ }
+ await page.emulateMedia({reducedMotion:"reduce"});
+ await expect(page.locator(".experience")).toHaveAttribute("data-reduced","true");
+ const reducedDelta=await page.evaluate(()=>{const s=document.getElementById("doctor-strange")!;return s.offsetTop+s.offsetHeight*.97-window.scrollY;});
+ await page.mouse.wheel(0,reducedDelta);
+ await expect(page.locator(".experience")).toHaveAttribute("data-passage","strange");
+ await expect(page.locator("#mission")).toHaveAttribute("data-arriving","false");
+ await page.getByRole("link",{name:"Skip to mission",exact:true}).click();
+ expect(await page.locator("#mission .chapter-shell").evaluate(el=>getComputedStyle(el).opacity)).toBe("1");
+ expect(errors).toEqual([]);
+});
+
 test("cinematic connectors scrub at five points with no overlapping fixed copy or shader errors",async({page})=>{
  test.setTimeout(180000);
  const errors:string[]=[];page.on("pageerror",e=>errors.push(e.message));page.on("console",m=>{if(m.type()==="error")errors.push(m.text());});

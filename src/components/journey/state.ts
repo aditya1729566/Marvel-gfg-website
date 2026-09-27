@@ -84,7 +84,7 @@ export function journeyCamera(
     // Depart the gamma bay, hold on Strange's gesture, then enter the aperture.
     // No dolly while the ring is being drawn: the silhouette and hand stay clear.
     const approach = reduced ? (phase >= .52 ? 1 : 0) : smooth(.35, .52, phase);
-    const enter = reduced ? 0 : smooth(.84, 1, phase);
+    const enter = reduced ? 0 : smooth(.82, 1, phase);
     const nextY = mobile ? .4 : .1;
     return { chapter, phase, passage: enter, x: 0, y: .5 + (nextY - .5) * approach, roll: 0,
       z: distance - 96 - approach * 13 - enter * 19 };

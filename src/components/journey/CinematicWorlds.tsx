@@ -104,7 +104,7 @@ function Fracture({state}:{state:JourneyRef}){
 
 function StrangePassage({state}:{state:JourneyRef}){
  const group=useRef<THREE.Group>(null),actor=useRef<THREE.Group>(null),mobile=useThree(s=>s.size.width<1024||s.size.width/s.size.height<1.2);
- useFrame(()=>{const s=state.current;if(group.current)group.current.visible=s.progress>3.49&&s.progress<4.01;if(actor.current)actor.current.position.y=(mobile?-2.2:-1)+(s.reduced?0:(1-smooth(3.49,3.57,s.progress))*.35);});
+ useFrame(()=>{const s=state.current;if(group.current)group.current.visible=s.progress>3.49&&s.progress<4.18;if(actor.current)actor.current.position.y=(mobile?-2.2:-1)+(s.reduced?0:(1-smooth(3.49,3.57,s.progress))*.35);});
  return <group ref={group} name="doctor-strange-image-interlude">
   <group position={[mobile?-1.25:.15,mobile?-1.1:.65,-112]}><DestinationWindow state={state}/><PortalRing state={state}/></group>
   <group ref={actor} position={[mobile?1.4:3.2,mobile?-2.2:-1,-111]} scale={[-1,1,1]}><CinematicHero name="strange" state={state} height={mobile?5.8:7.3} lightColor="#ff8f40" region={[.73,.82,.18,.2]} singleLayer/></group>
