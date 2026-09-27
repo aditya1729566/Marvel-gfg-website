@@ -11,11 +11,19 @@ Iron Man now uses `public/models/iron-man.glb`, exported from the user-supplied 
 | `public/art/iron.webp` (fallback only) | 1 / flying pose, forward palm | 446 × 686 |
 | `public/art/spider.webp` | 13 / suspended athletic pose | 414 × 740 |
 | `public/art/hulk.webp` | 8 / charging pose | 475 × 421 |
-| `public/art/strange-multiarms.webp` | 11 / central real actor, runtime central-figure silhouette | 738 × 370 |
+| `public/art/strange-multiarms.webp` (retired reference) | 11 / central real actor | 738 × 370 |
 
 These are user-supplied images, not generated character replacements or independently licensed assets. Sources are copied unchanged into `asset-sources/{iron,spider,hulk,strange}.png`. No embedded watermark was deliberately removed. Unselected references, including the visibly attributed image 7, were not used.
 
 Runtime encoding uses Sharp only for resizing/format optimization, never for segmentation or semantic editing. No enlargement is performed. The character textures therefore do not magically gain native 2K detail. Runtime GLSL silhouette/chroma masks composite the unmodified images into the worlds. Two complementary material masks put the foreground hand/fist ahead of the body; subdivided depth meshes, pointer parallax, light overlays and atmospheric layers provide the spatial treatment.
+
+## Doctor Strange dedicated interlude — September 27 revision
+
+The runtime now uses a real spellcasting photograph, sourced from [FreePNGimg: Doctor Strange Image](https://freepngimg.com/png/21897-doctor-strange-image), credited there to Jason Newhouse under CC BY-NC 4.0. Original alpha PNG: 1159 × 1920, preserved as `asset-sources/strange-sanctum.png`. Desktop WebP is 966 × 1600 (212 KB); mobile is 604 × 1000 (105 KB). This is a third-party license claim, not independent clearance of Marvel/Disney's underlying character or film rights. It is not licensed for commercial reuse. Source attribution, license and an animation-change notice appear in the interlude; the FAQ identifies the experience as fan-made and unaffiliated.
+
+The standing pose, multi-arm still, and several checkerboard-baked previews were compared and rejected. No new Strange model or AI-generated character is used. A mirrored alpha-textured depth surface preserves the selected casting pose. Native GLSL lightly articulates its raised forearm around the elbow in sync with the portal drawing and moves the cloak in depth. Runtime silhouette masking excludes stray source-image fragments; raster pixels are otherwise unchanged. The reversible master score raises the gesture, draws the ring from the hand-side edge, reveals the destination, expands it, and moves the camera through. A real `#doctor-strange` scroll section separates Hulk from mission, with keyboard-accessible skip and a static reduced-motion state.
+
+Stark and gamma backgrounds now use simple rectangular steel/concrete bays and a few local lights. Removed: Stark's three arched frames, overlapping HUD rings, idle haze/dust, gamma's broken circular containment assembly, constant reactor mist and idle debris. Gamma debris/cracks remain only during the explicit impact response. Adjacent chapter geometry is culled before the next hero's resting composition.
 
 ## Retired generated environment plates
 

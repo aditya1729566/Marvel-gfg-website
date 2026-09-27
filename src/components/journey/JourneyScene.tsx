@@ -86,6 +86,7 @@ function Conductor({
     [],
   );
   const background = useMemo(() => new THREE.Color(), []);
+  const sanctum = useMemo(() => new THREE.Color("#150e11"), []);
   const targetPoint = useMemo(() => new THREE.Vector3(), []);
   const cameraTarget = useMemo(() => new THREE.Vector3(), []);
   const cameraRig = useMemo(() => new THREE.PerspectiveCamera(), []);
@@ -113,6 +114,7 @@ function Conductor({
     background
       .copy(colors[index])
       .lerp(colors[Math.min(index + 1, 5)], passage);
+    if (index === 3) background.copy(colors[3]).lerp(sanctum, smooth(3.43,3.55,p)).lerp(colors[4],smooth(3.9,4,p));
     scene.background = background;
     if (scene.fog instanceof THREE.Fog) scene.fog.color.copy(background);
     const target = journeyCamera(p, s.reduced, size.width < 1024 || size.width / size.height < 1.2);

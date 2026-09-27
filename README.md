@@ -1,6 +1,6 @@
 # Enter the Multiverse — GFG Bennett
 
-A continuous cinematic WebGL event experience. One persistent canvas connects a full-body Iron Man GLB inside a modeled assembly bay, a city canyon, damaged gamma facility, Doctor Strange's destination portal, mission briefing and final convergence. Spider-Man, Hulk and Strange still use supplied 2.5D artwork; they are not falsely described as rigged 3D models.
+A continuous cinematic WebGL event experience. One persistent canvas connects a full-body Iron Man GLB inside a clean assembly bay, a city canyon, gamma containment bay, a dedicated Doctor Strange portal interlude, Avengers-style mission dossier and final convergence. Spider-Man and Hulk use supplied 2.5D artwork; Strange uses a sourced casting photograph with restrained image-based animation. They are not rigged 3D models.
 
 ## Run
 
@@ -17,11 +17,15 @@ Click the actual suit once to disassemble it. Click an exposed armor part to iso
 
 Keyboard users can focus the suit instructions: Enter opens, arrow keys rotate, Escape returns. A component selector and viewing-angle slider appear on keyboard focus. This retains accessible alternatives without obstructing the 3D scene. Hidden parts are excluded from ray picking, and mesh dragging does not select the page's text.
 
+## Doctor Strange transition
+
+`#doctor-strange` is its own native-scroll section between Hulk and the mission. The camera approaches, holds on a real casting pose while the forearm traces the ring, then enters the expanding portal. The master score is reversible; reduced motion presents a static open gateway. “Skip to mission” remains available without requiring the animation. Source attribution and the third-party noncommercial license claim are documented in `CINEMATIC-ASSETS.md`.
+
 ## Organizer information
 
 All event facts live in `src/data/event.ts`. Replace the working title and set `workingTitle: false` when confirmed. Fill in date, venue, format, eligibility, team size, registration deadline, prize pool, schedule, contact email, registration URL, and FAQ answers. Null fields are displayed as pending, not inferred. Registration links switch to the official URL when provided. This site does not collect payments or simulate successful registration.
 
-Learn / Build / Compete are creative themes, not confirmed competition tracks. Character images were supplied by the user; rights were not independently verified and this is not an official Marvel/Disney site. Confirm organizer approval, image rights and event facts before public launch. Source images are preserved in `asset-sources/`; optimized runtime textures are in `public/art/`. See `CINEMATIC-ASSETS.md` for provenance and replacement instructions. Set `NEXT_PUBLIC_SITE_URL` to the deployment origin.
+Learn / Build / Compete are creative themes, not confirmed competition tracks. Spider-Man and Hulk images were supplied by the user; Strange's casting photograph is sourced and attributed. Rights were not independently verified and this is not an official Marvel/Disney site. Source images are preserved in `asset-sources/`; optimized runtime textures are in `public/art/`. See `CINEMATIC-ASSETS.md` for provenance, the third-party noncommercial license claim, and replacement instructions. Set `NEXT_PUBLIC_SITE_URL` to the deployment origin.
 
 ## Architecture
 

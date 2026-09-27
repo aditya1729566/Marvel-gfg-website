@@ -50,7 +50,7 @@ const ringVertex=`varying vec3 local;void main(){local=position;gl_Position=proj
 const ringFragment=`varying vec3 local;uniform float time;uniform float strength;
  float hash(float p){return fract(sin(p*127.1)*43758.5453);}
  float noise(float x){float i=floor(x);float f=fract(x);return mix(hash(i),hash(i+1.),f*f*(3.-2.*f));}
- void main(){float r=length(local.xy);float a=atan(local.y,local.x);float turn=fract((a+3.14159265)/6.2831853+.12);
+ void main(){float r=length(local.xy);float a=atan(local.y,local.x);float turn=fract(a/6.2831853+.94);
   float tip=strength*1.06;float formed=1.-smoothstep(tip-.035,tip+.015,turn);
   float broken=mix(.35,1.,smoothstep(.18,.65,noise(turn*19.+time*.37)));
   float ripple=(noise(turn*23.-time*.31)-.5)*.082+sin(a*7.+time*1.6)*.018;
@@ -72,8 +72,8 @@ export function PortalRing({state,intro=false,finale=false}:{state:JourneyRef;in
   for(let i=0;i<count;i++)for(let tail=0;tail<5;tail++){const j=i*5+tail;seeds.set([(i*.61803398875)%1,(i*.41421356)%1,(i*.75487766)%1,tail/5],j*4);}return{p,seeds};
  },[mobile]);
  useFrame(()=>{
-  const s=state.current,m=s.motion,amount=intro||finale?1:m?.portal??0;
-  if(group.current){group.current.visible=amount>.001;group.current.scale.setScalar(intro?1+smooth(.5,1,s.progress)*3.5:finale?1:1+(m?.portalOpen??0)*2.5);}
+  const s=state.current,m=s.motion,amount=intro||finale||s.reduced?1:m?.portal??0;
+  if(group.current){group.current.visible=amount>.001;group.current.scale.setScalar(intro?1+smooth(.5,1,s.progress)*3.5:finale?1:s.reduced?.75:.75+(m?.portalOpen??0)*2.75);}
   if(ring.current){ring.current.uniforms.time.value=time.current;ring.current.uniforms.strength.value=amount;}
   if(sparks.current){sparks.current.uniforms.time.value=time.current;sparks.current.uniforms.strength.value=amount;}
   if(light.current)light.current.intensity=amount*(intro||finale?8:22);
@@ -85,7 +85,7 @@ export function PortalRing({state,intro=false,finale=false}:{state:JourneyRef;in
    <shaderMaterial ref={sparks} uniforms={sparkUniforms} transparent depthWrite={false} blending={THREE.AdditiveBlending} toneMapped={false}
     vertexShader={`attribute vec4 spark;uniform float time;uniform float strength;uniform float pixelRatio;varying float heat;varying float tail;
      void main(){float age=fract(spark.x+time*(.33+spark.z*.19));age=max(0.,age-spark.w*.048);
-      float turn=fract(spark.y+time*.045);float a=(turn-.12)*6.2831853-3.14159265;
+      float turn=fract(spark.y+time*.045);float a=(turn-.94)*6.2831853;
       vec3 origin=vec3(cos(a)*2.71,sin(a)*2.71,0.);vec3 tangent=vec3(-sin(a),cos(a),0.);
       vec3 p=origin+tangent*age*(.8+spark.z*2.5)+vec3(cos(a),sin(a),0.)*age*age*.42;
       p.y-=age*age*(.55+spark.z);p.z+=(spark.x-.5)*age*2.5;
@@ -104,12 +104,12 @@ export function DestinationWindow({state}:{state:JourneyRef}) {
  const {size,viewport}=useThree(),mobile=size.width<1024||size.width/size.height<1.2,group=useRef<THREE.Group>(null),material=useRef<THREE.ShaderMaterial>(null);
  const uniforms=useMemo(()=>({destination:{value:null},resolution:{value:new THREE.Vector2(1,1)},strength:{value:0},time:{value:0}}),[]);
  const time=useJourneyTime(state),[live,setLive]=useState(false);
- useEffect(()=>{const update=()=>setLive(!state.current.reduced&&!state.current.paused&&state.current.progress>3.35&&state.current.progress<4.15);window.addEventListener("journey-update",update);update();return()=>window.removeEventListener("journey-update",update);},[state]);
- useFrame(()=>{const s=state.current;if(group.current){group.current.visible=(s.motion?.portal??0)>.04;group.current.scale.setScalar(1+(s.motion?.portalOpen??0)*2.5);}if(material.current){material.current.uniforms.resolution.value.set(size.width*viewport.dpr,size.height*viewport.dpr);material.current.uniforms.strength.value=s.motion?.portal??0;material.current.uniforms.time.value=time.current;}});
+ useEffect(()=>{const update=()=>{const p=state.current.targetProgress??state.current.progress;setLive(p>3.49&&p<4.15);};window.addEventListener("journey-update",update);update();return()=>window.removeEventListener("journey-update",update);},[state]);
+ useFrame(()=>{const s=state.current;if(group.current){group.current.visible=s.reduced||(s.motion?.portal??0)>.04;group.current.scale.setScalar(s.reduced?.75:.75+(s.motion?.portalOpen??0)*2.75);}if(material.current){material.current.uniforms.resolution.value.set(size.width*viewport.dpr,size.height*viewport.dpr);material.current.uniforms.strength.value=s.reduced?1:s.motion?.portal??0;material.current.uniforms.time.value=time.current;}});
  return <group ref={group}><mesh position={[0,0,-.06]}><circleGeometry args={[2.65,128]} /><shaderMaterial ref={material} uniforms={uniforms} transparent depthWrite={false}
   vertexShader={`varying vec2 localUv;void main(){localUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`}
   fragmentShader={`uniform sampler2D destination;uniform vec2 resolution;uniform float strength;uniform float time;varying vec2 localUv;
-   void main(){vec2 q=localUv-.5;float edge=length(q)*2.;float turn=fract((atan(q.y,q.x)+3.14159265)/6.2831853+.12);
+   void main(){vec2 q=localUv-.5;float edge=length(q)*2.;float turn=fract(atan(q.y,q.x)/6.2831853+.94);
     float formed=1.-smoothstep(strength*1.06-.035,strength*1.06+.015,turn);
     float aperture=smoothstep(.14,.76,strength)*formed*(1.-smoothstep(.965,1.,edge));
     vec2 heat=q*sin(edge*32.-time*3.)*.0016*smoothstep(.65,1.,edge);

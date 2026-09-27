@@ -12,7 +12,7 @@ import { useJourneyTime } from "./useJourneyTime";
 
 function World({state,start,children}:{state:JourneyRef;start:number;children:React.ReactNode}) {
  const group=useRef<THREE.Group>(null);
- useFrame(()=>{if(group.current)group.current.visible=state.current.progress>start-.55&&state.current.progress<start+1.13;});
+ useFrame(()=>{if(group.current)group.current.visible=state.current.progress>start-.24&&state.current.progress<(start===3?3.5:start+.9999);});
  return <group ref={group} position={[0,0,-start*32]}>{children}</group>;
 }
 
@@ -46,15 +46,12 @@ function Haze({state,color,position=[0,0,0]}:{state:JourneyRef;color:string;posi
 }
 
 export function IronWorld({state}:{state:JourneyRef}){
- const mobile=useThree(s=>s.size.width<1024||s.size.width/s.size.height<1.2),repulsor=useRef<THREE.Group>(null),hud=useRef<THREE.Group>(null);
+ const mobile=useThree(s=>s.size.width<1024||s.size.width/s.size.height<1.2),repulsor=useRef<THREE.Group>(null);
  useFrame(({camera})=>{const p=state.current.progress,shoot=smooth(1.55,1.72,p);
-  if(hud.current)hud.current.scale.setScalar(state.current.action===1?1.1:1);
   if(repulsor.current){const origin=state.current.armorAnchors?.left_gauntlet;
    repulsor.current.visible=p>1.53&&p<1.85&&!state.current.reduced;repulsor.current.position.set(THREE.MathUtils.lerp(origin?.[0]??(mobile?1.34:3.9),camera.position.x,shoot),THREE.MathUtils.lerp(origin?.[1]??(mobile?-2.24:.25),camera.position.y,shoot),THREE.MathUtils.lerp(origin?.[2]??-31.25,camera.position.z-3,shoot));repulsor.current.scale.setScalar(.12+(state.current.motion?.blast??0)*.8);}});
- return <><World state={state} start={1}><StarkLab state={state}/><Glow color="#ac512c" size={13} opacity={.16} position={[3,0,-4]}/>
+ return <><World state={state} start={1}><StarkLab state={state}/><Glow color="#ac512c" size={8} opacity={.06} position={[3,0,-5]}/>
   <group position={[mobile?.7:2.8,productionArmorUrl?(mobile?-2.2:-.2):(mobile?-2.55:-.25),.5]}><ArmorAssembly state={state} height={productionArmorUrl?(mobile?5.8:7.8):(mobile?7:8.4)}/></group>
-  {!mobile&&<group ref={hud} position={[2.6,.1,-1]}>{[2.7,3.2].map((r,i)=><mesh key={r} rotation={[0,0,i*.4]}><torusGeometry args={[r,.008,4,80,Math.PI*1.35]}/><meshBasicMaterial color="#78c6d4" transparent opacity={.32}/></mesh>)}</group>}
-  <Haze state={state} color="#4b8796" position={[2,-1,2]}/><Dust state={state} color="#e9a069" count={mobile?70:160}/>
  </World><group ref={repulsor}><Glow color="#b6faff" size={2.2} opacity={.7}/><Glow color="#f1ffff" size={.35} opacity={1}/></group></>;
 }
 
@@ -80,11 +77,10 @@ export function SpiderWorld({state}:{state:JourneyRef}){
 
 export function GammaWorld({state}:{state:JourneyRef}){
  const mobile=useThree(s=>s.size.width<1024||s.size.width/s.size.height<1.2),actor=useRef<THREE.Group>(null),cracks=useRef<THREE.Group>(null);
- useFrame(()=>{const s=state.current;if(actor.current)actor.current.scale.setScalar(.86+smooth(2.78,3.1,s.progress)*.14);if(cracks.current)cracks.current.scale.setScalar(.65+(s.action===3?Math.min(1,(performance.now()-s.actionTime)/500):.35)*.55);});
- return <World state={state} start={3}><GammaFacility state={state}/><Glow color="#7b9f35" size={13} opacity={.16} position={[3,0,-4]}/>
+ useFrame(()=>{const s=state.current;if(actor.current)actor.current.scale.setScalar(.86+smooth(2.78,3.1,s.progress)*.14);if(cracks.current){cracks.current.visible=s.action===3&&!s.reduced&&!s.paused&&performance.now()-s.actionTime<900;cracks.current.scale.setScalar(.65+(s.action===3?Math.min(1,(performance.now()-s.actionTime)/500):.35)*.55);}});
+ return <World state={state} start={3}><GammaFacility state={state}/><Glow color="#7b9f35" size={8} opacity={.055} position={[3,0,-5]}/>
   <group ref={actor} position={[mobile?.3:3.1,mobile?-2.1:-1.05,.5]}><CinematicHero name="hulk" state={state} height={mobile?4.7:6.5} lightColor="#94d454" region={[.13,.71,.15,.22]}/></group>
   <group ref={cracks} position={[2,-3.7,1]} rotation={[-Math.PI/2,0,0]}>{Array.from({length:11},(_,i)=>{const a=i*2.399;return <Strand key={i} color="#73a94e" radius={.007} points={[[0,0,0],[Math.cos(a)*1.3,Math.sin(a)*1.3,.02],[Math.cos(a+.11)*2.6,Math.sin(a+.11)*2.6,.02],[Math.cos(a)*4.5,Math.sin(a)*4.5,.02]]}/>;})}</group>
-  <Haze state={state} color="#758068" position={[2,-1,3]}/><Dust state={state} color="#a1ac7c" count={mobile?100:260} impact/>
  </World>;
 }
 
@@ -108,14 +104,16 @@ function Fracture({state}:{state:JourneyRef}){
 
 function StrangePassage({state}:{state:JourneyRef}){
  const group=useRef<THREE.Group>(null),actor=useRef<THREE.Group>(null),mobile=useThree(s=>s.size.width<1024||s.size.width/s.size.height<1.2);
- useFrame(()=>{if(group.current)group.current.visible=state.current.progress>3.43&&state.current.progress<4.08;if(actor.current){const p=state.current.progress;actor.current.position.y=-.3+(1-smooth(3.46,3.7,p))*.8;actor.current.scale.setScalar(.85+smooth(3.46,3.7,p)*.15);}});
- return <group ref={group}><group position={[0,0,-112]}><DestinationWindow state={state}/><PortalRing state={state}/></group>
-  <group ref={actor} position={[mobile?1.15:3.6,-.3,-109]}><CinematicHero name="strange" state={state} height={mobile?4.5:5.8} lightColor="#ff8f40" region={[.49,.37,.13,.15]}/></group>
-  <group position={[0,0,-110]}><Haze state={state} color="#b7845b" position={[0,-2,1]}/></group></group>;
+ useFrame(()=>{const s=state.current;if(group.current)group.current.visible=s.progress>3.49&&s.progress<4.01;if(actor.current)actor.current.position.y=(mobile?-2.2:-1)+(s.reduced?0:(1-smooth(3.49,3.57,s.progress))*.35);});
+ return <group ref={group} name="doctor-strange-image-interlude">
+  <group position={[mobile?-1.25:.15,mobile?-1.1:.65,-112]}><DestinationWindow state={state}/><PortalRing state={state}/></group>
+  <group ref={actor} position={[mobile?1.4:3.2,mobile?-2.2:-1,-111]} scale={[-1,1,1]}><CinematicHero name="strange" state={state} height={mobile?5.8:7.3} lightColor="#ff8f40" region={[.73,.82,.18,.2]} singleLayer/></group>
+  <pointLight position={[2,1,-109]} color="#ff8e42" intensity={14} distance={8}/>
+ </group>;
 }
 
 export function Passage({state}:{state:JourneyRef}){
  const mission=useRef<THREE.Group>(null);
- useFrame(()=>{if(mission.current)mission.current.visible=state.current.progress>3.8&&state.current.progress<5.2;});
+ useFrame(()=>{const s=state.current;if(mission.current)mission.current.visible=s.progress<5.2&&(s.progress>=4||(!s.reduced&&s.progress>3.84&&(s.cameraPosition?.[2]??0)<-111.8));});
  return <><WebTunnel state={state}/><Fracture state={state}/><StrangePassage state={state}/><group ref={mission} position={[0,0,-128]}><MissionEnvironment/></group></>;
 }

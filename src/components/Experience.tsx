@@ -98,6 +98,7 @@ export default function Experience() {
       root.current!.querySelectorAll<HTMLElement>(".chapter"),
     );
     let offsets = sections.map((el) => el.offsetTop);
+    const portalSection = root.current!.querySelector<HTMLElement>(".strange-interlude")!;
     let previous = -1;
     const master = createMasterTimeline(state.current.motion!);
     const journey = state.current;
@@ -117,28 +118,37 @@ export default function Experience() {
           (y - offsets[index]) / Math.max(1, length),
         ),
       );
-      state.current.targetProgress = index + phase;
+      const inPortal = index === 3 && y >= portalSection.offsetTop;
+      // The interlude owns a real scroll interval, while retaining the six world
+      // coordinates of the camera and the single reversible master score.
+      const portalPhase = Math.max(0, Math.min(1, (y - portalSection.offsetTop) / Math.max(1, offsets[4] - portalSection.offsetTop)));
+      const worldPhase = index === 3 ? (inPortal ? .52 + portalPhase * .48 : ((y - offsets[3]) / Math.max(1, portalSection.offsetTop - offsets[3])) * .52) : phase;
+      state.current.targetProgress = index + worldPhase;
       sections.forEach((section, i) => {
-        const current = i === index;
+        const current = i === index && !inPortal;
         section.dataset.current = String(current);
         const travel = !state.current.reduced && i < 4;
-        const opacity = current ? (travel ? Math.max(0, 1 - Math.max(0, phase - 0.48) / 0.12) : 1) : 0;
+        const opacity = current ? (travel ? Math.max(0, 1 - Math.max(0, worldPhase - 0.48) / 0.12) : 1) : 0;
         section.style.setProperty("--copy-opacity", String(opacity));
         section.style.setProperty("--copy-shift", `${travel ? Math.max(0, phase - 0.48) * -100 : 0}px`);
         // Inactive fixed panels must never intercept pointer/keyboard navigation.
         section.querySelector<HTMLElement>(".chapter-shell")!.inert = !current || opacity === 0;
       });
+      portalSection.dataset.current = String(inPortal);
+      portalSection.style.setProperty("--portal-copy-opacity", String(state.current.reduced ? 1 : 1 - Math.max(0, portalPhase - .58) / .18));
+      portalSection.querySelector<HTMLElement>(".strange-shell")!.inert = !inPortal || (!state.current.reduced && portalPhase > .76);
       if (previous !== index) {
         previous = index;
         setActive(index);
       }
       if (root.current) {
-        root.current.dataset.portal = String(index === 3 && phase > 0.46);
+        root.current.dataset.portal = String(inPortal);
+        root.current.dataset.passage = inPortal ? "strange" : "world";
         root.current.style.setProperty(
           "--journey-progress",
-          `${((index + phase) / 5.99) * 100}%`,
+          `${((index + worldPhase) / 5.99) * 100}%`,
         );
-        root.current.style.setProperty("--accent", chapterColors[index]);
+        root.current.style.setProperty("--accent", inPortal ? "#f3b778" : chapterColors[index]);
         root.current.style.setProperty("--chapter-drift", String(phase));
       }
       notify();
@@ -520,10 +530,25 @@ export default function Experience() {
               </div>
               <div className="chapter-footer">
                 <span>BUILD SOMETHING THAT MATTERS.</span>
-                <a href="#mission">
-                  Receive the mission <ArrowDown size={16} />
+                <a href="#doctor-strange">
+                  Enter Strange’s portal <ArrowDown size={16} />
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+        <section id="doctor-strange" className="strange-interlude" aria-labelledby="strange-heading">
+          <div className="strange-shell">
+            <div className="chapter-grid">
+              <ChapterLabel number="↗" name="DOCTOR STRANGE" code="THE SANCTUM / BETWEEN WORLDS" />
+              <div className="strange-copy">
+                <span className="world-kicker">THE NEXT WORLD IS ONE GESTURE AWAY.</span>
+                <h2 id="strange-heading">OPEN A<br /><span>NEW REALITY.</span></h2>
+                <p>Follow the Sorcerer Supreme.<br />Scroll to draw the gateway, then step through.</p>
+                <a href="#mission" className="strange-skip">Skip to mission <ArrowUpRight size={17} aria-hidden="true" /></a>
+              </div>
+              <div className="strange-caption" aria-hidden="true">SLING RING / GATEWAY TO THE MISSION</div>
+              <a className="reference-credit" href="https://freepngimg.com/png/21897-doctor-strange-image" target="_blank" rel="noreferrer">Image: FreePNGimg / Jason Newhouse · CC BY-NC 4.0 · animated</a>
             </div>
           </div>
         </section>
@@ -536,6 +561,7 @@ export default function Experience() {
                 code="ALL WORLDS / ONE OBJECTIVE"
               />
               <div className="mission-heading">
+                <div className="dossier-stamp"><span>AVENGERS INITIATIVE</span><small>GFG BENNETT / MISSION DOSSIER</small></div>
                 <span className="world-kicker">
                   YOUR NEXT CHAPTER STARTS HERE.
                 </span>
@@ -551,6 +577,7 @@ export default function Experience() {
                 </p>
               </div>
               <div className="mission-information">
+                <div className="dossier-header"><span>MISSION INTEL</span><small>DETAILS PENDING</small></div>
                 <dl>
                   {[
                     ["Date", eventData.date],
@@ -664,8 +691,10 @@ export default function Experience() {
         </section>
         <section className="afterword" id="faq" aria-labelledby="faq-heading">
           <div className="faq">
-            <span className="eyebrow">THE FINAL CHECKPOINT</span>
+            <div className="field-manual-mark" aria-hidden="true"><span>A</span><i /></div>
+            <span className="eyebrow">AVENGERS FIELD MANUAL / THE FINAL CHECKPOINT</span>
             <h2 id="faq-heading">BEFORE YOU ENTER.</h2>
+            <p className="faq-intro">Every team needs a briefing. Here’s what we know so far.</p>
             {eventData.faqs.map((item) => (
               <details key={item.question}>
                 <summary>
@@ -678,12 +707,13 @@ export default function Experience() {
             <a className="contact-link" href="#top">
               Back to the gateway <ArrowUpRight size={15} />
             </a>
+            <p className="fan-disclaimer">A fan-made, Marvel-inspired student experience. Not affiliated with Marvel Studios.</p>
           </div>
         </section>
       </main>
       <div className="journey-controls">
         <span className="chapter-status">
-          <i />0{active} / 05 <b>{chapterNames[active]}</b>
+          <i />0{active} / 05 <b className="world-status-label">{chapterNames[active]}</b><b className="strange-status-label">Doctor Strange</b>
         </span>
         <button
           className="motion-control"

@@ -61,7 +61,7 @@ export const chapterColors = [
   "#84e5ec",
   "#ec6262",
   "#b4f37b",
-  "#b9dbe5",
+  "#ff7777",
   "#f3b778",
 ];
 export const clamp = (n: number, lo = 0, hi = 1) =>
@@ -80,6 +80,15 @@ export function journeyCamera(
   const phase = progress - chapter;
   const passage = reduced || chapter === 5 ? 0 : smooth(0.62, 1, phase);
   const distance = mobile ? 14.5 : 11.5;
+  if (chapter === 3) {
+    // Depart the gamma bay, hold on Strange's gesture, then enter the aperture.
+    // No dolly while the ring is being drawn: the silhouette and hand stay clear.
+    const approach = reduced ? (phase >= .52 ? 1 : 0) : smooth(.35, .52, phase);
+    const enter = reduced ? 0 : smooth(.84, 1, phase);
+    const nextY = mobile ? .4 : .1;
+    return { chapter, phase, passage: enter, x: 0, y: .5 + (nextY - .5) * approach, roll: 0,
+      z: distance - 96 - approach * 13 - enter * 19 };
+  }
   const startY = [mobile ? 0.4 : 0.1,0.25,0,0.5,mobile ? 0.4 : 0.1,mobile ? 0.4 : 0.1];
   let x = 0,
     y = startY[chapter],

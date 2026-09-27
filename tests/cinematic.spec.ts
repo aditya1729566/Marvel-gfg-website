@@ -1,14 +1,44 @@
 import { test, expect } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
 import { createMasterTimeline, initialMotion } from "../src/components/journey/timeline";
+import { journeyCamera } from "../src/components/journey/state";
 
 test("master score is labeled, reversible and keeps effects in their intended worlds",()=>{
  const motion=initialMotion(),timeline=createMasterTimeline(motion);
- expect(Object.keys(timeline.labels)).toEqual(["intro","hero","iron","repulsor-to-web","spider","web-smash","hulk","strange-portal","mission","registration"]);
+ expect(Object.keys(timeline.labels)).toEqual(["intro","hero","iron","repulsor-to-web","spider","web-smash","hulk","strange-gesture","strange-portal","mission","registration"]);
  timeline.time(1.71);expect(motion.blast).toBeCloseTo(1);
  timeline.time(2);expect(motion.blast).toBe(0);expect(motion.web).toBe(1);
- timeline.time(3.9);expect(motion.portal).toBe(1);expect(motion.portalOpen).toBeGreaterThan(.95);
+ timeline.time(3.96);expect(motion.portal).toBe(1);expect(motion.portalOpen).toBeGreaterThan(.95);
  timeline.time(0);expect(motion.blast).toBe(0);expect(motion.portal).toBe(0);expect(motion.smash).toBe(0);
+ expect(motion.strangeGesture).toBe(0);
+ for(const mobile of [false,true]){
+  expect(journeyCamera(3.61,false,mobile).z).toBe(journeyCamera(3.79,false,mobile).z);
+  expect(Math.abs(journeyCamera(3.99999,false,mobile).z-journeyCamera(4,false,mobile).z)).toBeLessThan(.01);
+ }
  timeline.kill();
+});
+
+test("Strange has a dedicated, reversible portal interval with an accessible skip",async({page})=>{
+ test.setTimeout(120000);
+ const errors:string[]=[];page.on("pageerror",e=>errors.push(e.message));page.on("console",m=>{if(m.type()==="error")errors.push(m.text());});
+ await page.setViewportSize({width:1280,height:900});await page.goto("/#doctor-strange");
+ await expect(page.locator(".journey-stage")).toHaveAttribute("data-ready","true",{timeout:60000});
+ await expect(page.locator(".experience")).toHaveAttribute("data-passage","strange");
+ await expect(page.getByRole("heading",{name:"OPEN A NEW REALITY."})).toBeVisible();
+ for(const phase of [.2,.5,.85,.3]){
+  await page.evaluate(phase=>{const s=document.getElementById("doctor-strange")!;window.scrollTo({top:s.offsetTop+s.offsetHeight*phase,behavior:"instant"});},phase);
+  await expect(page.locator(".experience")).toHaveAttribute("data-passage","strange");
+  await expect(page.locator("#hulk .chapter-shell")).not.toBeVisible();
+ }
+ await page.getByRole("link",{name:"Skip to mission",exact:true}).click();
+ await expect(page.locator(".experience")).toHaveAttribute("data-world","4");
+ await page.emulateMedia({reducedMotion:"reduce"});
+ await page.evaluate(()=>document.getElementById("doctor-strange")!.scrollIntoView({behavior:"instant"}));
+ await expect(page.getByRole("link",{name:"Skip to mission",exact:true})).toBeVisible();
+ await expect(page.locator("canvas")).toHaveCount(1);
+ const accessibility=await new AxeBuilder({page}).withTags(["wcag2a","wcag2aa","wcag21aa"]).analyze();
+ expect(accessibility.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
+ expect(errors).toEqual([]);
 });
 
 test("cinematic connectors scrub at five points with no overlapping fixed copy or shader errors",async({page})=>{
