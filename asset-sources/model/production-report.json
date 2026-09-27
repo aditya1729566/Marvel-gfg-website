@@ -1,0 +1,4970 @@
+{
+  "input": "/Users/adityaagrawal/Documents/Codex/2026-09-27/r/outputs/multiverse/public/models/iron-man.glb",
+  "bytes": 11828744,
+  "generator": "Khronos glTF Blender I/O v4.5.51",
+  "meshCount": 102,
+  "meshes": [
+    {
+      "index": 0,
+      "name": "Vert.002",
+      "triangles": 23116,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 23116,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "Vert.001",
+      "triangles": 2064,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 2064,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "Vert.003",
+      "triangles": 128,
+      "primitives": [
+        {
+          "material": "arc",
+          "triangleCount": 128,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Vert.020",
+      "triangles": 128,
+      "primitives": [
+        {
+          "material": "arc",
+          "triangleCount": 128,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Vert",
+      "triangles": 8112,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 8112,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "name": "Circle",
+      "triangles": 2816,
+      "primitives": [
+        {
+          "material": "white",
+          "triangleCount": 2816,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "name": "Circle.010",
+      "triangles": 2816,
+      "primitives": [
+        {
+          "material": "white",
+          "triangleCount": 2816,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "name": "Circle.002",
+      "triangles": 560,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 560,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "name": "Circle.011",
+      "triangles": 560,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 560,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "name": "Cube",
+      "triangles": 1680,
+      "primitives": [
+        {
+          "material": "white",
+          "triangleCount": 1680,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "name": "Cube.001",
+      "triangles": 1680,
+      "primitives": [
+        {
+          "material": "white",
+          "triangleCount": 1680,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "Vert.009",
+      "triangles": 1080,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1080,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "name": "Vert.038",
+      "triangles": 1080,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1080,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "name": "Vert.004",
+      "triangles": 14108,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 14108,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "name": "Vert.005",
+      "triangles": 800,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 800,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "name": "Cylinder",
+      "triangles": 5056,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 5056,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "name": "Circle.003",
+      "triangles": 892,
+      "primitives": [
+        {
+          "material": "arc",
+          "triangleCount": 892,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "name": "Vert.010",
+      "triangles": 4480,
+      "primitives": [
+        {
+          "material": "white",
+          "triangleCount": 4480,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "name": "Vert.012",
+      "triangles": 288,
+      "primitives": [
+        {
+          "material": "glss",
+          "triangleCount": 288,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "name": "Vert.040",
+      "triangles": 272,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 272,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "name": "Circle.013",
+      "triangles": 5728,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 5728,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "name": "Vert.046",
+      "triangles": 1768,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1768,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "name": "Vert.039",
+      "triangles": 7826,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 7826,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "name": "Vert.007",
+      "triangles": 272,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 272,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "name": "Circle.004",
+      "triangles": 5728,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 5728,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "name": "Vert.019",
+      "triangles": 1768,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1768,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "name": "Vert.006",
+      "triangles": 7826,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 7826,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "name": "Circle.009",
+      "triangles": 4096,
+      "primitives": [
+        {
+          "material": "white",
+          "triangleCount": 4096,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "name": "Vert.042",
+      "triangles": 3180,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3180,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "name": "Vert.045",
+      "triangles": 3328,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 3328,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "name": "Sphere",
+      "triangles": 960,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 960,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "name": "Circle.001",
+      "triangles": 4096,
+      "primitives": [
+        {
+          "material": "white",
+          "triangleCount": 4096,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "name": "Vert.023",
+      "triangles": 3180,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3180,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "name": "Vert.021",
+      "triangles": 3328,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 3328,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "name": "Sphere.001",
+      "triangles": 960,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 960,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "name": "Cylinder.004",
+      "triangles": 2880,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 2880,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "name": "Vert.041",
+      "triangles": 2240,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 2240,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "name": "Circle.012",
+      "triangles": 2752,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 2752,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "name": "Vert.043",
+      "triangles": 7784,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 7784,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "name": "Cylinder.001",
+      "triangles": 2880,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 2880,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "name": "Vert.024",
+      "triangles": 2240,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 2240,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "name": "Circle.005",
+      "triangles": 2752,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 2752,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "name": "Vert.022",
+      "triangles": 7784,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 7784,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.008",
+      "triangles": 33748,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 33748,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "name": "Cylinder.005",
+      "triangles": 3240,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3240,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "name": "Vert.044",
+      "triangles": 1088,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1088,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.009",
+      "triangles": 800,
+      "primitives": [
+        {
+          "material": "arc",
+          "triangleCount": 800,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.010",
+      "triangles": 1024,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1024,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.002",
+      "triangles": 33748,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 33748,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "name": "Cylinder.003",
+      "triangles": 3240,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3240,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "name": "Vert.035",
+      "triangles": 1088,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1088,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.006",
+      "triangles": 800,
+      "primitives": [
+        {
+          "material": "arc",
+          "triangleCount": 800,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.007",
+      "triangles": 1024,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1024,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "name": "Vert.013",
+      "triangles": 6384,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 6384,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "name": "Vert.015",
+      "triangles": 9744,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 9744,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "name": "Vert.018",
+      "triangles": 1248,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1248,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "name": "Vert.032",
+      "triangles": 1248,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1248,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "name": "Vert.054",
+      "triangles": 2640,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 2640,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "name": "Vert.055",
+      "triangles": 6736,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 6736,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "name": "Vert.053",
+      "triangles": 8284,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 8284,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "name": "Vert.026",
+      "triangles": 2640,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 2640,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "name": "Vert.025",
+      "triangles": 6736,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 6736,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "name": "Vert.027",
+      "triangles": 8284,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 8284,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "name": "Vert.047",
+      "triangles": 3874,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3874,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "name": "Vert.056",
+      "triangles": 270,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 270,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "name": "Cylinder.006",
+      "triangles": 5568,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 5568,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "name": "Vert.048",
+      "triangles": 21616,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 21616,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "name": "Cylinder.007",
+      "triangles": 2880,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 2880,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "name": "Vert.050",
+      "triangles": 1040,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 1040,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "name": "Vert.049",
+      "triangles": 2176,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 2176,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "name": "Circle.016",
+      "triangles": 8400,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 8400,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "name": "Circle.014",
+      "triangles": 4294,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 4294,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "name": "Circle.015",
+      "triangles": 4294,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 4294,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "name": "Vert.031",
+      "triangles": 3872,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3872,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "name": "Vert.057",
+      "triangles": 272,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 272,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "name": "Cylinder.002",
+      "triangles": 5568,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 5568,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "name": "Vert.028",
+      "triangles": 21616,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 21616,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 77,
+      "name": "Cylinder.008",
+      "triangles": 2880,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 2880,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "name": "Vert.030",
+      "triangles": 1040,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 1040,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "name": "Vert.029",
+      "triangles": 2176,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 2176,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "name": "Circle.007",
+      "triangles": 4294,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 4294,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "name": "Circle.008",
+      "triangles": 4294,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 4294,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 82,
+      "name": "Circle.006",
+      "triangles": 8400,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 8400,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.011",
+      "triangles": 4604,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 4604,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 84,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.012",
+      "triangles": 7740,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 7740,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 85,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.013",
+      "triangles": 15804,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 15804,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "name": "Vert.052",
+      "triangles": 1168,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1168,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.014",
+      "triangles": 9856,
+      "primitives": [
+        {
+          "material": "arc",
+          "triangleCount": 9856,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "name": "Vert.051",
+      "triangles": 1448,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1448,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.004",
+      "triangles": 4604,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 4604,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.005",
+      "triangles": 7740,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 7740,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.001",
+      "triangles": 15804,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 15804,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "name": "Vert.034",
+      "triangles": 1168,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1168,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "name": "Iron_Man_mark-7(Subsurf)mesh.003",
+      "triangles": 9856,
+      "primitives": [
+        {
+          "material": "arc",
+          "triangleCount": 9856,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL",
+            "TEXCOORD_0"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "name": "Vert.033",
+      "triangles": 1448,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1448,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "name": "Vert.017",
+      "triangles": 3984,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3984,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "name": "Vert.036",
+      "triangles": 3984,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3984,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "name": "Vert.008",
+      "triangles": 3168,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3168,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 98,
+      "name": "Vert.014",
+      "triangles": 1840,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1840,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 99,
+      "name": "Vert.037",
+      "triangles": 1840,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 1840,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 100,
+      "name": "Vert.011",
+      "triangles": 4960,
+      "primitives": [
+        {
+          "material": "yellow",
+          "triangleCount": 4960,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 101,
+      "name": "Vert.016",
+      "triangles": 3808,
+      "primitives": [
+        {
+          "material": "red",
+          "triangleCount": 3808,
+          "mode": 4,
+          "attributes": [
+            "POSITION",
+            "NORMAL"
+          ]
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "index": 0,
+      "name": "red",
+      "pbr": {
+        "baseColorFactor": [
+          0.13361386954784393,
+          0.008225763216614723,
+          0.003733679885044694,
+          1
+        ],
+        "roughnessFactor": 0.5
+      },
+      "normalTexture": null,
+      "occlusionTexture": null,
+      "emissiveTexture": null,
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 0.25
+        }
+      }
+    },
+    {
+      "index": 1,
+      "name": "yellow",
+      "pbr": {
+        "baseColorFactor": [
+          0.22153405845165253,
+          0.13680200278759003,
+          0.014816561713814735,
+          1
+        ],
+        "roughnessFactor": 0.5
+      },
+      "normalTexture": null,
+      "occlusionTexture": null,
+      "emissiveTexture": null,
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 0.25
+        }
+      }
+    },
+    {
+      "index": 2,
+      "name": "arc",
+      "pbr": {
+        "baseColorFactor": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "normalTexture": null,
+      "occlusionTexture": null,
+      "emissiveTexture": null,
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 9.90000057220459
+        }
+      }
+    },
+    {
+      "index": 3,
+      "name": "white",
+      "pbr": {
+        "baseColorFactor": [
+          0.800000011920929,
+          0.800000011920929,
+          0.800000011920929,
+          1
+        ],
+        "roughnessFactor": 0.5
+      },
+      "normalTexture": null,
+      "occlusionTexture": null,
+      "emissiveTexture": null,
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 0.25
+        }
+      }
+    },
+    {
+      "index": 4,
+      "name": "glss",
+      "pbr": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      },
+      "normalTexture": null,
+      "occlusionTexture": null,
+      "emissiveTexture": null,
+      "extensions": {
+        "KHR_materials_transmission": {
+          "transmissionFactor": 1
+        },
+        "KHR_materials_ior": {
+          "ior": 1.4500000476837158
+        }
+      }
+    }
+  ],
+  "boneCount": 0,
+  "bones": [],
+  "textures": [],
+  "triangleCountUniqueGeometry": 504464,
+  "triangleCountMeshInstances": 504464,
+  "skins": [],
+  "nodes": [
+    {
+      "index": 0,
+      "name": "h.head",
+      "mesh": 0,
+      "skin": null,
+      "armorPart": "helmet",
+      "translation": [
+        0,
+        -1.6144622564315796,
+        -0.0011648503132164478
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 1,
+      "name": "helmet",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "helmet",
+      "translation": [
+        0,
+        1.61446213722229,
+        0.0011648498475551605
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 2,
+      "name": "h.chin",
+      "mesh": 1,
+      "skin": null,
+      "armorPart": "faceplate",
+      "translation": [
+        -0.0005274331197142601,
+        -1.5965888500213623,
+        -0.08403919637203217
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 3,
+      "name": "h.eye.l",
+      "mesh": 2,
+      "skin": null,
+      "armorPart": "faceplate",
+      "translation": [
+        -0.0005274331197142601,
+        -1.5965888500213623,
+        -0.08403918147087097
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.6326183080673218,
+        0.6326183080673218,
+        0.6326183080673218
+      ],
+      "matrix": null
+    },
+    {
+      "index": 4,
+      "name": "h.eye.r",
+      "mesh": 3,
+      "skin": null,
+      "armorPart": "faceplate",
+      "translation": [
+        -0.0005274331197142601,
+        -1.5965888500213623,
+        -0.08403918892145157
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.6326183080673218,
+        0.6326183080673218,
+        0.6326183080673218
+      ],
+      "matrix": null
+    },
+    {
+      "index": 5,
+      "name": "h.mask",
+      "mesh": 4,
+      "skin": null,
+      "armorPart": "faceplate",
+      "translation": [
+        -0.0005274331197142601,
+        -1.5965889692306519,
+        -0.08403918147087097
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 6,
+      "name": "faceplate",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "faceplate",
+      "translation": [
+        0.0005274331197142601,
+        1.5965888500213623,
+        0.08403918892145157
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 7,
+      "name": "b. c nuts.l",
+      "mesh": 5,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943961827550083,
+        -1.4353184700012207,
+        -0.019439954310655594
+      ],
+      "rotation": [
+        0.47878581285476685,
+        0,
+        0,
+        0.8779317140579224
+      ],
+      "scale": [
+        0.00912418682128191,
+        0.009124187752604485,
+        0.009124187752604485
+      ],
+      "matrix": null
+    },
+    {
+      "index": 8,
+      "name": "b. c nuts.r",
+      "mesh": 6,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943216769490391,
+        -1.4353183507919312,
+        -0.019439969211816788
+      ],
+      "rotation": [
+        0.47878581285476685,
+        0,
+        0,
+        0.8779317140579224
+      ],
+      "scale": [
+        0.00912418682128191,
+        0.009124187752604485,
+        0.009124187752604485
+      ],
+      "matrix": null
+    },
+    {
+      "index": 9,
+      "name": "b. chest .l",
+      "mesh": 7,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943216769490391,
+        -1.4353183507919312,
+        -0.01943989098072052
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.7071066498756409,
+        0.70710688829422
+      ],
+      "scale": [
+        0.07454117387533188,
+        0.07454117387533188,
+        0.07454117387533188
+      ],
+      "matrix": null
+    },
+    {
+      "index": 10,
+      "name": "b. chest .r",
+      "mesh": 8,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943216769490391,
+        -1.4353183507919312,
+        -0.01943989098072052
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.7071066498756409,
+        0.70710688829422
+      ],
+      "scale": [
+        0.07454117387533188,
+        0.07454117387533188,
+        0.07454117387533188
+      ],
+      "matrix": null
+    },
+    {
+      "index": 11,
+      "name": "b. chest nuts.l",
+      "mesh": 9,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007942844240460545,
+        -1.4353183507919312,
+        -0.019439861178398132
+      ],
+      "rotation": [
+        -0.32874947786331177,
+        0,
+        0,
+        0.9444171786308289
+      ],
+      "scale": [
+        0.005156570114195347,
+        0.005156570114195347,
+        0.005156570114195347
+      ],
+      "matrix": null
+    },
+    {
+      "index": 12,
+      "name": "b. chest nuts.r",
+      "mesh": 10,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943589298520237,
+        -1.4353184700012207,
+        -0.019439898431301117
+      ],
+      "rotation": [
+        -0.32874947786331177,
+        0,
+        0,
+        0.9444171786308289
+      ],
+      "scale": [
+        0.005156570114195347,
+        0.005156570114195347,
+        0.005156570114195347
+      ],
+      "matrix": null
+    },
+    {
+      "index": 13,
+      "name": "b. neck.l",
+      "mesh": 11,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007942844240460545,
+        -1.4353183507919312,
+        -0.01943989470601082
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 14,
+      "name": "b. neck.r",
+      "mesh": 12,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943589298520237,
+        -1.4353183507919312,
+        -0.01943989470601082
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 15,
+      "name": "b.chest",
+      "mesh": 13,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943216769490391,
+        -1.4353183507919312,
+        -0.01943989470601082
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 16,
+      "name": "b.d neck",
+      "mesh": 14,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943216769490391,
+        -1.4353183507919312,
+        -0.019439896568655968
+      ],
+      "rotation": [
+        0.0034831452649086714,
+        0,
+        0,
+        0.9999939203262329
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 17,
+      "name": "b.neck",
+      "mesh": 15,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        0.00007943219679873437,
+        -1.4353183507919312,
+        -0.01943989470601082
+      ],
+      "rotation": [
+        0.06143490970134735,
+        0,
+        0,
+        0.9981111884117126
+      ],
+      "scale": [
+        0.06195968762040138,
+        0.09634815901517868,
+        0.06195969507098198
+      ],
+      "matrix": null
+    },
+    {
+      "index": 18,
+      "name": "chest_plate",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "chest_plate",
+      "translation": [
+        -0.00007943216769490391,
+        1.4353183507919312,
+        0.01943989470601082
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 19,
+      "name": "b. arkreactor",
+      "mesh": 16,
+      "skin": null,
+      "armorPart": "arc_reactor_housing",
+      "translation": [
+        0,
+        -1.3164610862731934,
+        -0.1155492290854454
+      ],
+      "rotation": [
+        0.6455013751983643,
+        0,
+        0,
+        0.7637590765953064
+      ],
+      "scale": [
+        0.013683927245438099,
+        0.013683929108083248,
+        0.013683929108083248
+      ],
+      "matrix": null
+    },
+    {
+      "index": 20,
+      "name": "b. arkrec",
+      "mesh": 17,
+      "skin": null,
+      "armorPart": "arc_reactor_housing",
+      "translation": [
+        0,
+        -1.3164613246917725,
+        -0.11554922163486481
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 21,
+      "name": "b. arkrec glass",
+      "mesh": 18,
+      "skin": null,
+      "armorPart": "arc_reactor_housing",
+      "translation": [
+        0,
+        -1.3164613246917725,
+        -0.11554922163486481
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 22,
+      "name": "arc_reactor_housing",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "arc_reactor_housing",
+      "translation": [
+        0,
+        1.3164613246917725,
+        0.11554922163486481
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 23,
+      "name": "b. shoulder 2.r",
+      "mesh": 19,
+      "skin": null,
+      "armorPart": "left_shoulder",
+      "translation": [
+        -0.17199376225471497,
+        -1.3931699991226196,
+        0.04047863930463791
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 24,
+      "name": "b. shoulder 3.r",
+      "mesh": 20,
+      "skin": null,
+      "armorPart": "left_shoulder",
+      "translation": [
+        -0.17199373245239258,
+        -1.393169641494751,
+        0.04047863557934761
+      ],
+      "rotation": [
+        0.7051838636398315,
+        -0.05211234465241432,
+        -0.10688774287700653,
+        0.698981523513794
+      ],
+      "scale": [
+        0.02438477799296379,
+        0.027288593351840973,
+        0.024365868419408798
+      ],
+      "matrix": null
+    },
+    {
+      "index": 25,
+      "name": "b. shoulder 4.r",
+      "mesh": 21,
+      "skin": null,
+      "armorPart": "left_shoulder",
+      "translation": [
+        -0.17199373245239258,
+        -1.39316987991333,
+        0.04047863930463791
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 26,
+      "name": "b. shoulder.r",
+      "mesh": 22,
+      "skin": null,
+      "armorPart": "left_shoulder",
+      "translation": [
+        -0.17199374735355377,
+        -1.39316987991333,
+        0.04047863930463791
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 27,
+      "name": "left_shoulder",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "left_shoulder",
+      "translation": [
+        0.17199374735355377,
+        1.39316987991333,
+        -0.04047863930463791
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 28,
+      "name": "b. shoulder 2.l",
+      "mesh": 23,
+      "skin": null,
+      "armorPart": "right_shoulder",
+      "translation": [
+        0.1707930564880371,
+        -1.3935455083847046,
+        0.03891332447528839
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 29,
+      "name": "b. shoulder 3.l",
+      "mesh": 24,
+      "skin": null,
+      "armorPart": "right_shoulder",
+      "translation": [
+        0.1707930862903595,
+        -1.3935456275939941,
+        0.03891332447528839
+      ],
+      "rotation": [
+        0.6995614767074585,
+        0.10302270948886871,
+        0.04821394011378288,
+        0.7054612040519714
+      ],
+      "scale": [
+        0.02438477799296379,
+        0.027288593351840973,
+        0.024365870282053947
+      ],
+      "matrix": null
+    },
+    {
+      "index": 30,
+      "name": "b. shoulder 4.l",
+      "mesh": 25,
+      "skin": null,
+      "armorPart": "right_shoulder",
+      "translation": [
+        0.17079302668571472,
+        -1.393545389175415,
+        0.03891332447528839
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 31,
+      "name": "b. shoulder.l",
+      "mesh": 26,
+      "skin": null,
+      "armorPart": "right_shoulder",
+      "translation": [
+        0.17079304158687592,
+        -1.393545389175415,
+        0.03891332447528839
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 32,
+      "name": "right_shoulder",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "right_shoulder",
+      "translation": [
+        -0.17079304158687592,
+        1.393545389175415,
+        -0.03891332447528839
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 33,
+      "name": "b. arm nuts.r",
+      "mesh": 27,
+      "skin": null,
+      "armorPart": "left_upper_arm",
+      "translation": [
+        -0.2161020189523697,
+        -1.263563632965088,
+        0.036185070872306824
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.7071066498756409,
+        0.70710688829422
+      ],
+      "scale": [
+        0.07454117387533188,
+        0.07454117387533188,
+        0.07454117387533188
+      ],
+      "matrix": null
+    },
+    {
+      "index": 34,
+      "name": "b. arm.r",
+      "mesh": 28,
+      "skin": null,
+      "armorPart": "left_upper_arm",
+      "translation": [
+        -0.2161020040512085,
+        -1.263563632965088,
+        0.036185067147016525
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 35,
+      "name": "b. hand y 1.r",
+      "mesh": 29,
+      "skin": null,
+      "armorPart": "left_upper_arm",
+      "translation": [
+        -0.2161019891500473,
+        -1.2635637521743774,
+        0.036185067147016525
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 36,
+      "name": "Sphere",
+      "mesh": 30,
+      "skin": null,
+      "armorPart": "left_upper_arm",
+      "translation": [
+        -0.2161019891500473,
+        -1.263563632965088,
+        0.036185067147016525
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.07189042121171951,
+        0.07189042121171951,
+        0.07189042121171951
+      ],
+      "matrix": null
+    },
+    {
+      "index": 37,
+      "name": "left_upper_arm",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "left_upper_arm",
+      "translation": [
+        0.2161020040512085,
+        1.263563632965088,
+        -0.036185067147016525
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 38,
+      "name": "b. arm nuts.l",
+      "mesh": 31,
+      "skin": null,
+      "armorPart": "right_upper_arm",
+      "translation": [
+        0.2161019891500473,
+        -1.263563632965088,
+        0.036185070872306824
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.7071066498756409,
+        0.70710688829422
+      ],
+      "scale": [
+        0.07454117387533188,
+        0.07454117387533188,
+        0.07454117387533188
+      ],
+      "matrix": null
+    },
+    {
+      "index": 39,
+      "name": "b. arm.l",
+      "mesh": 32,
+      "skin": null,
+      "armorPart": "right_upper_arm",
+      "translation": [
+        0.2161019742488861,
+        -1.263563632965088,
+        0.036185070872306824
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 40,
+      "name": "b. hand y 1.l",
+      "mesh": 33,
+      "skin": null,
+      "armorPart": "right_upper_arm",
+      "translation": [
+        0.2161019891500473,
+        -1.2635637521743774,
+        0.036185070872306824
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 41,
+      "name": "Sphere.001",
+      "mesh": 34,
+      "skin": null,
+      "armorPart": "right_upper_arm",
+      "translation": [
+        0.2161019891500473,
+        -1.263563632965088,
+        0.036185070872306824
+      ],
+      "rotation": [
+        1,
+        0,
+        0,
+        7.549790126404332e-8
+      ],
+      "scale": [
+        -0.07189042121171951,
+        -0.07189042121171951,
+        -0.07189042121171951
+      ],
+      "matrix": null
+    },
+    {
+      "index": 42,
+      "name": "right_upper_arm",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "right_upper_arm",
+      "translation": [
+        -0.2161020040512085,
+        1.263563632965088,
+        -0.036185070872306824
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 43,
+      "name": "b. albo front..r",
+      "mesh": 35,
+      "skin": null,
+      "armorPart": "left_forearm",
+      "translation": [
+        -0.2564067542552948,
+        -1.1749542951583862,
+        0.054772328585386276
+      ],
+      "rotation": [
+        -0.11612892895936966,
+        0.014197940938174725,
+        0.12052332609891891,
+        0.9857923984527588
+      ],
+      "scale": [
+        0.05706923454999924,
+        0.08691204339265823,
+        0.05010945722460747
+      ],
+      "matrix": null
+    },
+    {
+      "index": 44,
+      "name": "b. albo y.r",
+      "mesh": 36,
+      "skin": null,
+      "armorPart": "left_forearm",
+      "translation": [
+        -0.2564067244529724,
+        -1.1749542951583862,
+        0.054772332310676575
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 45,
+      "name": "b. albo.r",
+      "mesh": 37,
+      "skin": null,
+      "armorPart": "left_forearm",
+      "translation": [
+        -0.2564067244529724,
+        -1.1749542951583862,
+        0.05477232486009598
+      ],
+      "rotation": [
+        0.5,
+        0.5,
+        -0.5,
+        0.5
+      ],
+      "scale": [
+        0.027695804834365845,
+        0.027695804834365845,
+        0.027695804834365845
+      ],
+      "matrix": null
+    },
+    {
+      "index": 46,
+      "name": "b. fore arm.r",
+      "mesh": 38,
+      "skin": null,
+      "armorPart": "left_forearm",
+      "translation": [
+        -0.2564067542552948,
+        -1.1749542951583862,
+        0.05477232486009598
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 47,
+      "name": "left_forearm",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "left_forearm",
+      "translation": [
+        0.2564067244529724,
+        1.1749542951583862,
+        -0.054772332310676575
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 48,
+      "name": "b. albo front.l",
+      "mesh": 39,
+      "skin": null,
+      "armorPart": "right_forearm",
+      "translation": [
+        0.25691041350364685,
+        -1.1743437051773071,
+        0.05462638661265373
+      ],
+      "rotation": [
+        -0.11612892895936966,
+        0.014197940938174725,
+        0.12052332609891891,
+        0.9857923984527588
+      ],
+      "scale": [
+        0.05706923454999924,
+        0.08691204339265823,
+        0.05010945722460747
+      ],
+      "matrix": null
+    },
+    {
+      "index": 49,
+      "name": "b. albo y.l",
+      "mesh": 40,
+      "skin": null,
+      "armorPart": "right_forearm",
+      "translation": [
+        0.25691041350364685,
+        -1.1743437051773071,
+        0.054626427590847015
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 50,
+      "name": "b. albo.l",
+      "mesh": 41,
+      "skin": null,
+      "armorPart": "right_forearm",
+      "translation": [
+        0.25691041350364685,
+        -1.1743437051773071,
+        0.054626427590847015
+      ],
+      "rotation": [
+        0.5,
+        0.5,
+        -0.5,
+        0.5
+      ],
+      "scale": [
+        0.027695804834365845,
+        0.027695804834365845,
+        0.027695804834365845
+      ],
+      "matrix": null
+    },
+    {
+      "index": 51,
+      "name": "b. fore arm.l",
+      "mesh": 42,
+      "skin": null,
+      "armorPart": "right_forearm",
+      "translation": [
+        0.25691038370132446,
+        -1.1743438243865967,
+        0.05462642014026642
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 52,
+      "name": "right_forearm",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "right_forearm",
+      "translation": [
+        -0.25691041350364685,
+        1.1743437051773071,
+        -0.054626427590847015
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 53,
+      "name": "b. hand .r",
+      "mesh": 43,
+      "skin": null,
+      "armorPart": "left_gauntlet",
+      "translation": [
+        -0.3070697486400604,
+        -0.8754876255989075,
+        -0.023281505331397057
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 54,
+      "name": "b. hand 2.r",
+      "mesh": 44,
+      "skin": null,
+      "armorPart": "left_gauntlet",
+      "translation": [
+        -0.3070698082447052,
+        -0.8754876852035522,
+        -0.02328154444694519
+      ],
+      "rotation": [
+        -0.14808380603790283,
+        0.014795594848692417,
+        0.09831170737743378,
+        0.9839649796485901
+      ],
+      "scale": [
+        0.0336606428027153,
+        0.05747726559638977,
+        0.0341370664536953
+      ],
+      "matrix": null
+    },
+    {
+      "index": 55,
+      "name": "b. hand 3.r",
+      "mesh": 45,
+      "skin": null,
+      "armorPart": "left_gauntlet",
+      "translation": [
+        -0.3070697784423828,
+        -0.8754876255989075,
+        -0.023281503468751907
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 56,
+      "name": "b. hand buster.r",
+      "mesh": 46,
+      "skin": null,
+      "armorPart": "left_gauntlet",
+      "translation": [
+        -0.3070697784423828,
+        -0.8754876852035522,
+        -0.023281505331397057
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 57,
+      "name": "b. hand ring.r",
+      "mesh": 47,
+      "skin": null,
+      "armorPart": "left_gauntlet",
+      "translation": [
+        -0.3070697486400604,
+        -0.8754876255989075,
+        -0.023281505331397057
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 58,
+      "name": "left_gauntlet",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "left_gauntlet",
+      "translation": [
+        0.3070697784423828,
+        0.8754876255989075,
+        0.023281505331397057
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 59,
+      "name": "b. hand .l",
+      "mesh": 48,
+      "skin": null,
+      "armorPart": "right_gauntlet",
+      "translation": [
+        0.30706802010536194,
+        -0.8755786418914795,
+        -0.023253485560417175
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 60,
+      "name": "b. hand 2.l",
+      "mesh": 49,
+      "skin": null,
+      "armorPart": "right_gauntlet",
+      "translation": [
+        0.3070680499076843,
+        -0.8755785822868347,
+        -0.023253504186868668
+      ],
+      "rotation": [
+        -0.14808380603790283,
+        0.014795594848692417,
+        0.09831170737743378,
+        0.9839649796485901
+      ],
+      "scale": [
+        0.0336606428027153,
+        0.05747726559638977,
+        0.0341370664536953
+      ],
+      "matrix": null
+    },
+    {
+      "index": 61,
+      "name": "b. hand 3.l",
+      "mesh": 50,
+      "skin": null,
+      "armorPart": "right_gauntlet",
+      "translation": [
+        0.3070680499076843,
+        -0.8755785822868347,
+        -0.023253483697772026
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 62,
+      "name": "b. hand buster.l",
+      "mesh": 51,
+      "skin": null,
+      "armorPart": "right_gauntlet",
+      "translation": [
+        0.3070680499076843,
+        -0.8755786418914795,
+        -0.023253485560417175
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 63,
+      "name": "b. hand ring.l",
+      "mesh": 52,
+      "skin": null,
+      "armorPart": "right_gauntlet",
+      "translation": [
+        0.30706802010536194,
+        -0.8755785822868347,
+        -0.023253485560417175
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 64,
+      "name": "right_gauntlet",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "right_gauntlet",
+      "translation": [
+        -0.3070680499076843,
+        0.8755785822868347,
+        0.023253485560417175
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 65,
+      "name": "b. abs",
+      "mesh": 53,
+      "skin": null,
+      "armorPart": "pelvis_armor",
+      "translation": [
+        0,
+        -1.0787159204483032,
+        0.006394302472472191
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 66,
+      "name": "b. belly",
+      "mesh": 54,
+      "skin": null,
+      "armorPart": "pelvis_armor",
+      "translation": [
+        0,
+        -1.0787159204483032,
+        0.006394295021891594
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 67,
+      "name": "b. stomach.l",
+      "mesh": 55,
+      "skin": null,
+      "armorPart": "pelvis_armor",
+      "translation": [
+        0,
+        -1.0787159204483032,
+        0.006394295021891594
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 68,
+      "name": "b. stomach.r",
+      "mesh": 56,
+      "skin": null,
+      "armorPart": "pelvis_armor",
+      "translation": [
+        0,
+        -1.0787159204483032,
+        0.006394293159246445
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 69,
+      "name": "pelvis_armor",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "pelvis_armor",
+      "translation": [
+        0,
+        1.0787159204483032,
+        -0.006394295021891594
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 70,
+      "name": "b. u leg side y.r",
+      "mesh": 57,
+      "skin": null,
+      "armorPart": "left_thigh",
+      "translation": [
+        -0.11202147603034973,
+        -0.804301917552948,
+        0.02257869765162468
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 71,
+      "name": "b. u leg y.r",
+      "mesh": 58,
+      "skin": null,
+      "armorPart": "left_thigh",
+      "translation": [
+        -0.11202147603034973,
+        -0.804301917552948,
+        0.02257869765162468
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 72,
+      "name": "b. u leg.r",
+      "mesh": 59,
+      "skin": null,
+      "armorPart": "left_thigh",
+      "translation": [
+        -0.11202147603034973,
+        -0.8043018579483032,
+        0.02257869765162468
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 73,
+      "name": "left_thigh",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "left_thigh",
+      "translation": [
+        0.11202147603034973,
+        0.804301917552948,
+        -0.02257869765162468
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 74,
+      "name": "b. u leg side y.l",
+      "mesh": 60,
+      "skin": null,
+      "armorPart": "right_thigh",
+      "translation": [
+        0.11202090233564377,
+        -0.8043018579483032,
+        0.02257869765162468
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 75,
+      "name": "b. u leg y.l",
+      "mesh": 61,
+      "skin": null,
+      "armorPart": "right_thigh",
+      "translation": [
+        0.11202089488506317,
+        -0.804301917552948,
+        0.02257869765162468
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 76,
+      "name": "b. u leg.l",
+      "mesh": 62,
+      "skin": null,
+      "armorPart": "right_thigh",
+      "translation": [
+        0.11202090233564377,
+        -0.804301917552948,
+        0.02257869392633438
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 77,
+      "name": "right_thigh",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "right_thigh",
+      "translation": [
+        -0.11202090233564377,
+        0.8043018579483032,
+        -0.02257869765162468
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 78,
+      "name": "b. b knee .r",
+      "mesh": 63,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944372415542603,
+        -0.585136353969574,
+        0.02275691367685795
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 79,
+      "name": "b. b knee .r.001",
+      "mesh": 64,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944372415542603,
+        -0.585136353969574,
+        0.02275691367685795
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 80,
+      "name": "b. b knee2.r",
+      "mesh": 65,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944370925426483,
+        -0.585136353969574,
+        0.02275691367685795
+      ],
+      "rotation": [
+        0.12949897348880768,
+        -0.005317931063473225,
+        0.04068469628691673,
+        0.9907302856445312
+      ],
+      "scale": [
+        0.0637400671839714,
+        0.07065694034099579,
+        0.06431098282337189
+      ],
+      "matrix": null
+    },
+    {
+      "index": 81,
+      "name": "b. d leg.r",
+      "mesh": 66,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944372415542603,
+        -0.585136353969574,
+        0.02275691367685795
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 82,
+      "name": "b. knee in..r.001",
+      "mesh": 67,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944372415542603,
+        -0.585136353969574,
+        0.02275691367685795
+      ],
+      "rotation": [
+        0.028271792456507683,
+        -0.9927302002906799,
+        -0.11269921064376831,
+        0.03140696510672569
+      ],
+      "scale": [
+        0.057069215923547745,
+        0.08691204339265823,
+        0.05010945349931717
+      ],
+      "matrix": null
+    },
+    {
+      "index": 83,
+      "name": "b. knee y.r",
+      "mesh": 68,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944372415542603,
+        -0.585136353969574,
+        0.02275691367685795
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 84,
+      "name": "b. knee.r",
+      "mesh": 69,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944372415542603,
+        -0.585136353969574,
+        0.02275690995156765
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 85,
+      "name": "b. leg circle.r",
+      "mesh": 70,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944370925426483,
+        -0.585136353969574,
+        0.022756919264793396
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.6941056847572327,
+        0.7198731303215027
+      ],
+      "scale": [
+        0.04657837375998497,
+        0.04657837375998497,
+        0.04657837375998497
+      ],
+      "matrix": null
+    },
+    {
+      "index": 86,
+      "name": "b. r Circle..r",
+      "mesh": 71,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944372415542603,
+        -0.585136353969574,
+        0.02275691367685795
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.6734032034873962,
+        0.7392753958702087
+      ],
+      "scale": [
+        0.0291956327855587,
+        0.0291956327855587,
+        0.0291956327855587
+      ],
+      "matrix": null
+    },
+    {
+      "index": 87,
+      "name": "b. r circle.l",
+      "mesh": 72,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        -0.10944371670484543,
+        -0.5851364135742188,
+        0.02275691367685795
+      ],
+      "rotation": [
+        -0.6808952689170837,
+        -0.7301401495933533,
+        0.038919903337955475,
+        0.041978586465120316
+      ],
+      "scale": [
+        -0.0291956327855587,
+        -0.02926585078239441,
+        -0.02919563464820385
+      ],
+      "matrix": null
+    },
+    {
+      "index": 88,
+      "name": "left_shin",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "left_shin",
+      "translation": [
+        0.10944372415542603,
+        0.585136353969574,
+        -0.02275691367685795
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 89,
+      "name": "b. b knee .l",
+      "mesh": 73,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959868878126144,
+        -0.583046019077301,
+        0.02324710413813591
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 90,
+      "name": "b. b knee .l.001",
+      "mesh": 74,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959868878126144,
+        -0.583046019077301,
+        0.02324710413813591
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 91,
+      "name": "b. b knee2.l",
+      "mesh": 75,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959869623184204,
+        -0.5830460786819458,
+        0.02324710041284561
+      ],
+      "rotation": [
+        0.12949897348880768,
+        -0.005317931063473225,
+        0.04068469628691673,
+        0.9907302856445312
+      ],
+      "scale": [
+        0.0637400671839714,
+        0.07065694034099579,
+        0.06431098282337189
+      ],
+      "matrix": null
+    },
+    {
+      "index": 92,
+      "name": "b. d leg.l",
+      "mesh": 76,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959868878126144,
+        -0.583046019077301,
+        0.02324710413813591
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 93,
+      "name": "b. knee in..r.002",
+      "mesh": 77,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959868133068085,
+        -0.583046019077301,
+        0.02324710786342621
+      ],
+      "rotation": [
+        -0.031406961381435394,
+        0.11269912123680115,
+        -0.9927302002906799,
+        0.028271794319152832
+      ],
+      "scale": [
+        -0.057069215923547745,
+        -0.08691205084323883,
+        -0.05010945722460747
+      ],
+      "matrix": null
+    },
+    {
+      "index": 94,
+      "name": "b. knee y.l",
+      "mesh": 78,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959868878126144,
+        -0.583046019077301,
+        0.02324710413813591
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 95,
+      "name": "b. knee.l",
+      "mesh": 79,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959868133068085,
+        -0.583046019077301,
+        0.02324710041284561
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 96,
+      "name": "b. l Circle.l",
+      "mesh": 80,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959868878126144,
+        -0.5830459594726562,
+        0.02324710227549076
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.6734032034873962,
+        0.7392753958702087
+      ],
+      "scale": [
+        0.0291956327855587,
+        0.0291956327855587,
+        0.0291956327855587
+      ],
+      "matrix": null
+    },
+    {
+      "index": 97,
+      "name": "b. l circle.r",
+      "mesh": 81,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959868133068085,
+        -0.583046019077301,
+        0.02324710413813591
+      ],
+      "rotation": [
+        -0.6808952689170837,
+        -0.7301401495933533,
+        0.038919903337955475,
+        0.041978586465120316
+      ],
+      "scale": [
+        -0.0291956327855587,
+        -0.02926585078239441,
+        -0.02919563464820385
+      ],
+      "matrix": null
+    },
+    {
+      "index": 98,
+      "name": "b. leg circle.l",
+      "mesh": 82,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        0.10959871858358383,
+        -0.5830461382865906,
+        0.02324710413813591
+      ],
+      "rotation": [
+        0,
+        0,
+        -0.6941056847572327,
+        0.7198731303215027
+      ],
+      "scale": [
+        0.04657837375998497,
+        0.04657837375998497,
+        0.04657837375998497
+      ],
+      "matrix": null
+    },
+    {
+      "index": 99,
+      "name": "right_shin",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "right_shin",
+      "translation": [
+        -0.10959868878126144,
+        0.583046019077301,
+        -0.02324710413813591
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 100,
+      "name": "b. shoe 1.r",
+      "mesh": 83,
+      "skin": null,
+      "armorPart": "left_boot",
+      "translation": [
+        -0.14094038307666779,
+        -0.05040512606501579,
+        0.020424868911504745
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 101,
+      "name": "b. shoe 2.r",
+      "mesh": 84,
+      "skin": null,
+      "armorPart": "left_boot",
+      "translation": [
+        -0.14094039797782898,
+        -0.05040512606501579,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 102,
+      "name": "b. shoe 3.r",
+      "mesh": 85,
+      "skin": null,
+      "armorPart": "left_boot",
+      "translation": [
+        -0.14094039797782898,
+        -0.05040512979030609,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 103,
+      "name": "b. shoe back.r",
+      "mesh": 86,
+      "skin": null,
+      "armorPart": "left_boot",
+      "translation": [
+        -0.14094038307666779,
+        -0.05040512606501579,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 104,
+      "name": "b. shoe buster.r",
+      "mesh": 87,
+      "skin": null,
+      "armorPart": "left_boot",
+      "translation": [
+        -0.14094038307666779,
+        -0.05040512606501579,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 105,
+      "name": "b. shoe.r",
+      "mesh": 88,
+      "skin": null,
+      "armorPart": "left_boot",
+      "translation": [
+        -0.14094038307666779,
+        -0.05040512606501579,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 106,
+      "name": "left_boot",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "left_boot",
+      "translation": [
+        0.14094039797782898,
+        0.05040512606501579,
+        -0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 107,
+      "name": "b. shoe 1.l",
+      "mesh": 89,
+      "skin": null,
+      "armorPart": "right_boot",
+      "translation": [
+        0.1409403532743454,
+        -0.05040512979030609,
+        0.020424868911504745
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 108,
+      "name": "b. shoe 2.l",
+      "mesh": 90,
+      "skin": null,
+      "armorPart": "right_boot",
+      "translation": [
+        0.1409403681755066,
+        -0.05040512979030609,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 109,
+      "name": "b. shoe 3.l",
+      "mesh": 91,
+      "skin": null,
+      "armorPart": "right_boot",
+      "translation": [
+        0.1409403681755066,
+        -0.05040512979030609,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 110,
+      "name": "b. shoe back.l",
+      "mesh": 92,
+      "skin": null,
+      "armorPart": "right_boot",
+      "translation": [
+        0.1409403532743454,
+        -0.05040512979030609,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 111,
+      "name": "b. shoe buster.l",
+      "mesh": 93,
+      "skin": null,
+      "armorPart": "right_boot",
+      "translation": [
+        0.1409403532743454,
+        -0.05040512979030609,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 112,
+      "name": "b. shoe.l",
+      "mesh": 94,
+      "skin": null,
+      "armorPart": "right_boot",
+      "translation": [
+        0.1409403532743454,
+        -0.05040512979030609,
+        0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 113,
+      "name": "right_boot",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "right_boot",
+      "translation": [
+        -0.1409403681755066,
+        0.05040512979030609,
+        -0.020424870774149895
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    },
+    {
+      "index": 114,
+      "name": "b. b back.l",
+      "mesh": 95,
+      "skin": null,
+      "armorPart": "back_armor",
+      "translation": [
+        0,
+        -1.2150564193725586,
+        0.11688254028558731
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 115,
+      "name": "b. b back.r",
+      "mesh": 96,
+      "skin": null,
+      "armorPart": "back_armor",
+      "translation": [
+        0,
+        -1.2150564193725586,
+        0.11688254028558731
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 116,
+      "name": "b. b neck",
+      "mesh": 97,
+      "skin": null,
+      "armorPart": "back_armor",
+      "translation": [
+        0,
+        -1.215056300163269,
+        0.11688254773616791
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 117,
+      "name": "b. b side.l",
+      "mesh": 98,
+      "skin": null,
+      "armorPart": "back_armor",
+      "translation": [
+        0,
+        -1.215056300163269,
+        0.11688253283500671
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 118,
+      "name": "b. b side.r",
+      "mesh": 99,
+      "skin": null,
+      "armorPart": "back_armor",
+      "translation": [
+        0,
+        -1.215056300163269,
+        0.11688253283500671
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 119,
+      "name": "b. back y",
+      "mesh": 100,
+      "skin": null,
+      "armorPart": "back_armor",
+      "translation": [
+        0,
+        -1.215056300163269,
+        0.11688252538442612
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 120,
+      "name": "b. bone",
+      "mesh": 101,
+      "skin": null,
+      "armorPart": "back_armor",
+      "translation": [
+        0,
+        -1.215056300163269,
+        0.11688254028558731
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0839202404022217,
+        1.0839202404022217,
+        1.0839202404022217
+      ],
+      "matrix": null
+    },
+    {
+      "index": 121,
+      "name": "back_armor",
+      "mesh": null,
+      "skin": null,
+      "armorPart": "back_armor",
+      "translation": [
+        0,
+        1.215056300163269,
+        -0.11688254028558731
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "matrix": null
+    }
+  ],
+  "armorParts": [
+    {
+      "part": "helmet",
+      "separatelySelectable": true,
+      "nodes": [
+        "h.head"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "faceplate",
+      "separatelySelectable": true,
+      "nodes": [
+        "h.chin",
+        "h.eye.l",
+        "h.eye.r",
+        "h.mask"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "chest_plate",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. c nuts.l",
+        "b. c nuts.r",
+        "b. chest .l",
+        "b. chest .r",
+        "b. chest nuts.l",
+        "b. chest nuts.r",
+        "b. neck.l",
+        "b. neck.r",
+        "b.chest",
+        "b.d neck",
+        "b.neck"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "arc_reactor_housing",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. arkreactor",
+        "b. arkrec",
+        "b. arkrec glass"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "left_shoulder",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. shoulder 2.r",
+        "b. shoulder 3.r",
+        "b. shoulder 4.r",
+        "b. shoulder.r"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "right_shoulder",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. shoulder 2.l",
+        "b. shoulder 3.l",
+        "b. shoulder 4.l",
+        "b. shoulder.l"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "left_upper_arm",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. arm nuts.r",
+        "b. arm.r",
+        "b. hand y 1.r",
+        "Sphere"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "right_upper_arm",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. arm nuts.l",
+        "b. arm.l",
+        "b. hand y 1.l",
+        "Sphere.001"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "left_forearm",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. albo front..r",
+        "b. albo y.r",
+        "b. albo.r",
+        "b. fore arm.r"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "right_forearm",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. albo front.l",
+        "b. albo y.l",
+        "b. albo.l",
+        "b. fore arm.l"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "left_gauntlet",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. hand .r",
+        "b. hand 2.r",
+        "b. hand 3.r",
+        "b. hand buster.r",
+        "b. hand ring.r"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "right_gauntlet",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. hand .l",
+        "b. hand 2.l",
+        "b. hand 3.l",
+        "b. hand buster.l",
+        "b. hand ring.l"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "pelvis_armor",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. abs",
+        "b. belly",
+        "b. stomach.l",
+        "b. stomach.r"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "left_thigh",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. u leg side y.r",
+        "b. u leg y.r",
+        "b. u leg.r"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "right_thigh",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. u leg side y.l",
+        "b. u leg y.l",
+        "b. u leg.l"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "left_shin",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. b knee .r",
+        "b. b knee .r.001",
+        "b. b knee2.r",
+        "b. d leg.r",
+        "b. knee in..r.001",
+        "b. knee y.r",
+        "b. knee.r",
+        "b. leg circle.r",
+        "b. r Circle..r",
+        "b. r circle.l"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "right_shin",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. b knee .l",
+        "b. b knee .l.001",
+        "b. b knee2.l",
+        "b. d leg.l",
+        "b. knee in..r.002",
+        "b. knee y.l",
+        "b. knee.l",
+        "b. l Circle.l",
+        "b. l circle.r",
+        "b. leg circle.l"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "left_boot",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. shoe 1.r",
+        "b. shoe 2.r",
+        "b. shoe 3.r",
+        "b. shoe back.r",
+        "b. shoe buster.r",
+        "b. shoe.r"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "right_boot",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. shoe 1.l",
+        "b. shoe 2.l",
+        "b. shoe 3.l",
+        "b. shoe back.l",
+        "b. shoe buster.l",
+        "b. shoe.l"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    },
+    {
+      "part": "back_armor",
+      "separatelySelectable": true,
+      "nodes": [
+        "b. b back.l",
+        "b. b back.r",
+        "b. b neck",
+        "b. b side.l",
+        "b. b side.r",
+        "b. back y",
+        "b. bone"
+      ],
+      "status": "explicitly mapped mesh node; verify visually"
+    }
+  ]
+}

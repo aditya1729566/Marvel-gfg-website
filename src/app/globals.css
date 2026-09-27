@@ -1,0 +1,1916 @@
+@import "tailwindcss";
+:root {
+  color-scheme: dark;
+  --ink: #eeeee8;
+  --muted: #b2b7bd;
+  --line: rgba(218, 233, 238, 0.2);
+  --accent: #f3b778;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  /* Explicit chapter links are immediate; continuous wheel/touch travel is choreographed by the single camera score. */
+  scroll-behavior: auto;
+  background: #0e1013;
+}
+body {
+  margin: 0;
+  font-family: var(--font-body), Arial, sans-serif;
+  color: var(--ink);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+button,
+summary,
+a {
+  touch-action: manipulation;
+}
+button {
+  border: 0;
+}
+button:disabled {
+  cursor: default;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
+::selection {
+  background: #f3b778;
+  color: #0d1014;
+}
+.experience {
+  --journey-progress: 0%;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+.skip-link {
+  position: fixed;
+  left: 20px;
+  top: 12px;
+  transform: translateY(-160%);
+  z-index: 100;
+  background: #f0eee5;
+  color: #111;
+  padding: 15px;
+}
+.skip-link:focus {
+  transform: none;
+}
+.journey-stage {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: #111116;
+}
+.journey-stage > div:not(.scene-shade):not(.scene-fallback) {
+  position: absolute !important;
+  inset: 0;
+}
+.journey-stage canvas {
+  display: block;
+}
+.scene-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 9, 14, 0.78),
+      rgba(6, 9, 14, 0.18) 40%,
+      transparent 68%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(6, 9, 14, 0.9),
+      transparent 22%,
+      transparent 80%,
+      rgba(6, 9, 14, 0.7)
+    );
+}
+.scene-fallback {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 65% 45%, #302d28, transparent 50%);
+}
+.scene-fallback span {
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: #ccc;
+}
+.fallback-orbit {
+  position: absolute;
+  right: 14%;
+  top: 20%;
+  height: 55vh;
+  aspect-ratio: 1;
+  border: 1px solid #b08860;
+  border-radius: 50%;
+  box-shadow:
+    0 0 70px #7b6d5440,
+    inset 0 0 80px #7b6d5420;
+  transform: rotate(-25deg) scaleX(0.85);
+}
+.fallback-core {
+  position: absolute;
+  right: 23%;
+  top: 40%;
+  width: 14vh;
+  height: 14vh;
+  transform: rotate(35deg);
+  border: 1px solid #86d6df;
+  background: linear-gradient(135deg, #477a8350, #ddd39330);
+  box-shadow: 0 0 70px #8cdeee30;
+}
+.journey-stage[data-ready="true"] .scene-fallback {
+  display: none;
+}
+.scene-loading {
+  position: absolute;
+  right: 7%;
+  bottom: 18%;
+  color: #c9cbc9;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+.site-header {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 27px 4.5%;
+  background: linear-gradient(#080c13a0, transparent);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.brand-mark {
+  font-size: 33px;
+  font-weight: 800;
+  letter-spacing: -0.09em;
+  line-height: 1;
+}
+.brand-dot {
+  color: var(--accent);
+}
+.brand-copy {
+  font-size: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+}
+.brand-copy > span {
+  display: block;
+  color: #b6bdc7;
+  font-size: 7px;
+}
+.desktop-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 35px;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+}
+.desktop-nav a {
+  padding: 12px 0;
+  border-bottom: 1px solid transparent;
+}
+.desktop-nav a:hover {
+  border-color: var(--accent);
+}
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #d2d6d04a;
+  padding: 12px 18px;
+  font-size: 10px;
+  background: #0d11162b;
+}
+.nav-cta:hover {
+  border-color: var(--accent);
+  background: #e0dfd20d;
+}
+.icon-button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+.menu-toggle {
+  display: none;
+}
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  padding: 25px;
+  background: #10151d;
+}
+.mobile-nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-bottom: 35px;
+}
+.mobile-nav > a {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 37px;
+}
+.mobile-nav > a small {
+  font-family: var(--font-body);
+  font-size: 10px;
+  padding-top: 12px;
+  color: var(--accent);
+}
+.mobile-nav > a svg {
+  margin-left: auto;
+  align-self: center;
+}
+.chapter {
+  position: relative;
+  height: 200svh;
+  scroll-margin-top: 0;
+}
+.chapter-shell {
+  position: sticky;
+  top: 0;
+  min-height: 100svh;
+  height: 100svh;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  opacity: var(--copy-opacity, 0);
+  transition: opacity .25s ease;
+  visibility: hidden;
+  transform: translateY(var(--copy-shift, 0px));
+}
+.chapter[data-current="true"] .chapter-shell { visibility: visible; }
+.armor-controls { margin-top: 16px; width: min(360px,100%); padding: 16px; border: 1px solid rgba(132,229,236,.3); background: rgba(8,11,17,.9); }
+.armor-controls label { display: block; font-size: 12px; color: #b9dbe5; margin-bottom: 8px; }
+.armor-controls select { width: 100%; min-height: 44px; color: #eeece4; background: #151d25; border: 1px solid #53646c; padding: 8px; font: inherit; font-size: 13px; }
+.armor-control-row { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.armor-control-row button { min-height: 44px; padding: 8px; background: #17212a; border: 1px solid #53646c; color: #eeece4; font-size: 12px; cursor: pointer; }
+.armor-control-row button:hover { background: #253843; }
+.armor-control-row button[aria-pressed="true"] { border-color: #84e5ec; color: #84e5ec; }
+@media(max-width:1023px) {
+ .iron[data-inspecting="true"] .world-copy { top: 20%; }
+ .iron[data-inspecting="true"] .world-copy h2 { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+ .iron[data-inspecting="true"] .world-kicker { display: none; }
+ .iron[data-inspecting="true"] .world-copy > p { display: none; }
+ .iron[data-inspecting="true"] .world-action { margin-top: 0; }
+ .iron[data-inspecting="true"] .armor-controls { padding: 10px; margin-top: 8px; }
+ .iron[data-inspecting="true"] .interaction-note { display: none; }
+}
+.gamma-readout { top: auto; bottom: 18%; }
+.gamma-readout strong { font-size: 48px; }
+.chapter:not(.mission):not(.finale) .chapter-shell { position: fixed; inset: 0; }
+.universe-cursor { display: none; }
+@media (hover: hover) and (pointer: fine) {
+ .experience[data-reduced="false"] .universe-cursor { display: block; position: fixed; left: 0; top: 0; width: 32px; height: 32px; transform: translate(calc(var(--cursor-x, -80px) - 16px), calc(var(--cursor-y, -80px) - 16px)); z-index: 80; pointer-events: none; color: var(--accent); opacity: .6; }
+ .universe-cursor i { position: absolute; inset: 3px; border: 1px solid currentColor; border-radius: 50%; transition: inset .4s, border-radius .4s, border-width .4s; }
+ .universe-cursor b { position: absolute; inset: 14px; background: currentColor; border-radius: 50%; }
+ .universe-cursor span { position: absolute; width: 4px; height: 4px; left: 14px; top: 0; background: currentColor; border-radius: 50%; }
+ .experience[data-world="1"] .universe-cursor i { border-radius: 2px; inset: 5px; }
+ .experience[data-world="2"] .universe-cursor i { border-style: dashed; inset: 7px; }
+ .experience[data-world="3"] .universe-cursor i { border-width: 2px; inset: 0; }
+ .experience[data-portal="true"] .universe-cursor { color: #ff9c45; }
+ .experience[data-portal="true"] .universe-cursor i { border-width: 1px; inset: 3px; }
+ .experience[data-portal="true"] .universe-cursor span { transform-origin: 2px 16px; animation: passage-orbit 1.6s linear infinite; }
+ .experience[data-paused="true"] .universe-cursor span { animation-play-state: paused; }
+}
+@keyframes passage-orbit { to { transform: rotate(360deg); } }
+@media(max-width:600px) {
+ .scene-shade { background: linear-gradient(180deg,#070b14dd,#070b1480 52%,transparent 72%,#060c14db),linear-gradient(90deg,#080d1440,transparent); }
+ .gamma-readout { bottom: 18%; }
+ .gamma-readout strong { font-size: 32px; }
+}
+.chapter-grid {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  height: 100%;
+  position: relative;
+  padding: 135px 9% 100px 7.5%;
+}
+.assembly {
+  height: 170svh;
+}
+.spider {
+  height: 210svh;
+}
+.hulk {
+  height: 190svh;
+}
+.mission {
+  height: 175svh;
+}
+.finale {
+  height: 130svh;
+}
+.eyebrow,
+.micro,
+.world-kicker,
+.interaction-note {
+  font-size: 9px;
+  letter-spacing: 0.17em;
+  line-height: 1.5;
+}
+.eyebrow {
+  color: var(--accent);
+}
+.micro {
+  color: #c8c5c0;
+}
+.intro-meta {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  position: absolute;
+  left: 7.5%;
+  top: 19%;
+}
+.intro-title {
+  position: absolute;
+  left: 7.5%;
+  top: 31%;
+  width: 85%;
+  z-index: 2;
+}
+.intro-title h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.81;
+  letter-spacing: -0.035em;
+}
+.intro-title h1 > span {
+  font-size: clamp(48px, 6vw, 110px);
+  display: block;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.intro-title strong {
+  font-weight: 400;
+  display: block;
+  font-size: clamp(96px, 14.1vw, 252px);
+  white-space: nowrap;
+}
+.outlined {
+  color: transparent;
+  -webkit-text-stroke: 1px #e6dfd7;
+}
+.intro-rule {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  width: 41%;
+  min-width: 300px;
+  max-width: 600px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #b5c7cb5c;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.intro-rule svg {
+  margin-left: auto;
+  color: var(--accent);
+}
+.intro-bottom {
+  position: absolute;
+  left: 7.5%;
+  bottom: 17%;
+  display: grid;
+  grid-template-columns: 170px 220px;
+  gap: 25px;
+  align-items: start;
+}
+.intro-bottom p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #d4d4d1;
+}
+.journey-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--accent);
+  padding: 13px 0;
+  font-size: 11px;
+  color: #f8cd9f;
+}
+.journey-link svg {
+  transition: transform 0.2s;
+}
+.journey-link:hover svg {
+  transform: translateY(4px);
+}
+.intro-bottom small {
+  grid-column: 1/-1;
+  color: #b1b3b4;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+}
+.artifact-caption {
+  position: absolute;
+  right: 9%;
+  bottom: 18%;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-align: right;
+  color: #d4b58f;
+}
+.artifact-caption small {
+  display: block;
+  color: #bac2c9;
+  font-size: 8px;
+  margin-top: 8px;
+}
+.chapter-label {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 17%;
+  left: 7.5%;
+}
+.chapter-number {
+  font-size: 11px;
+  border: 1px solid currentColor;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+}
+.chapter-label small {
+  display: block;
+  font-size: 7px;
+  letter-spacing: 0.13em;
+  color: #b2bdc7;
+  margin-top: 5px;
+}
+.world-copy {
+  position: absolute;
+  left: 7.5%;
+  top: 29%;
+  max-width: 49%;
+  width: 690px;
+  z-index: 1;
+}
+.world-kicker {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 20px;
+}
+.world-copy h2,
+.mission-heading h2 {
+  font-family: var(--font-display);
+  font-size: clamp(65px, 7.8vw, 143px);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+}
+.world-copy h2 span,
+.mission-heading h2 span {
+  color: var(--accent);
+}
+.world-copy > p,
+.mission-heading > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #c0c6cd;
+  margin-top: 26px;
+  max-width: 390px;
+}
+.world-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 46px;
+  padding: 13px 18px;
+  margin-top: 27px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: #0a101ba3;
+  font-size: 10px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.world-action:hover {
+  background: #8ccddd18;
+  transform: translateY(-2px);
+}
+.world-action svg:last-child {
+  margin-left: 15px;
+}
+.interaction-note {
+  display: block;
+  color: #aebbc6;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  margin-top: 14px;
+}
+.world-insignia {
+  position: absolute;
+  right: 8%;
+  top: 26%;
+  width: 115px;
+  color: #a4d6dc;
+}
+.world-insignia span {
+  font-size: 7px;
+  letter-spacing: 0.15em;
+  display: block;
+}
+.world-insignia strong {
+  font-family: var(--font-display);
+  font-size: 110px;
+  font-weight: 400;
+  line-height: 1.05;
+  color: transparent;
+  -webkit-text-stroke: 1px #6b9ca578;
+}
+.chapter-footer {
+  position: absolute;
+  left: 7.5%;
+  right: 9%;
+  bottom: 13%;
+  padding-top: 18px;
+  border-top: 1px solid #adbdc536;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  color: #bfc7cd;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+.chapter-footer a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 10px;
+  letter-spacing: 0;
+  color: var(--accent);
+}
+.iron .world-copy h2 {
+  font-size: clamp(65px, 7.3vw, 133px);
+}
+.iron .world-kicker {
+  font-family: monospace;
+  letter-spacing: 0.13em;
+}
+.iron .world-copy h2 span {
+  display: inline-block;
+  position: relative;
+}
+.iron .world-copy h2 span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 22%;
+  height: 2px;
+  background: var(--accent);
+}
+.spider .world-copy {
+  top: 27%;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
+.spider .world-copy h2 {
+  font-size: clamp(69px, 8vw, 145px);
+  font-style: italic;
+}
+.spider .world-copy > p {
+  margin-top: 19px;
+}
+.spider .world-kicker {
+  color: #f7a0a0;
+}
+.web-nodes {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  margin-top: 27px;
+  max-width: 440px;
+}
+.web-nodes:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #90adcb70;
+  top: 25px;
+  transform: rotate(5deg);
+}
+.web-nodes button {
+  position: relative;
+  background: #0c1524df;
+  color: #cbd0d7;
+  border: 1px solid #56667c;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 14px;
+  font-size: 11px;
+  min-height: 48px;
+  flex: 1;
+}
+.web-nodes button span {
+  font-size: 8px;
+  color: #93b6db;
+}
+.web-nodes button:nth-child(2) {
+  transform: translateY(9px);
+}
+.web-nodes button[aria-pressed="true"] {
+  border-color: #f16e76;
+  color: #fff;
+  background: #4c1f31c7;
+}
+.web-nodes button i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-left: auto;
+}
+.node-detail {
+  margin-top: 28px;
+  max-width: 360px;
+  min-height: 77px;
+}
+.node-detail > span {
+  font-size: 10px;
+  color: #f6acb0;
+}
+.node-detail p {
+  font-size: 10px;
+  line-height: 1.65;
+  color: #c0c8d2;
+  margin-top: 7px;
+}
+.city-coordinate {
+  position: absolute;
+  right: 9%;
+  bottom: 24%;
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 1;
+  color: #7896ba;
+}
+.city-coordinate span {
+  font-family: var(--font-body);
+  font-size: 7px;
+  letter-spacing: 0.15em;
+}
+.spider .interaction-note {
+  font-size: 6.5px;
+}
+.hulk .world-copy {
+  top: 28%;
+}
+.hulk .world-copy h2 {
+  font-size: clamp(90px, 10.5vw, 180px);
+  line-height: 0.83;
+  letter-spacing: -0.02em;
+  transform: scaleX(1.08);
+  transform-origin: left;
+}
+.hulk .world-copy h2 span {
+  display: block;
+  text-shadow: 4px 4px 0 #172219;
+}
+.hulk .world-kicker {
+  font-weight: 700;
+  font-size: 9px;
+}
+.hulk .world-action {
+  background: #1c2914cf;
+  font-weight: 600;
+  border-width: 2px;
+}
+.gamma-readout {
+  position: absolute;
+  right: 8%;
+  top: 23%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  color: #c4dfb0;
+}
+.gamma-readout small {
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+.gamma-readout strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 1.1;
+  color: #c4efa8;
+}
+.gamma-readout span {
+  font-size: 6.5px;
+  letter-spacing: 0.09em;
+}
+.mission-heading {
+  position: absolute;
+  left: 7.5%;
+  top: 29%;
+  width: 40%;
+}
+.mission-heading h2 {
+  font-size: clamp(65px, 7.5vw, 132px);
+}
+.mission-information {
+  position: absolute;
+  left: 55%;
+  right: 10%;
+  top: 27%;
+  padding: 12px 0 0;
+  background: linear-gradient(90deg, transparent, #0a1722b3);
+}
+.mission-information dl {
+  margin: 0;
+}
+.mission-information dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 17px 0;
+  border-bottom: 1px solid #b6d0d234;
+}
+.mission-information dt {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+}
+.mission-information dt small {
+  font-size: 8px;
+  color: #77a8b7;
+}
+.mission-information dd {
+  margin: 0;
+  font-size: 10px;
+  color: #c9dfdf;
+  text-align: right;
+}
+.schedule {
+  margin-top: 27px;
+}
+.schedule h3,
+.faq h3 {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.schedule h3 span {
+  font-size: 6px;
+  letter-spacing: 0.08em;
+  color: #b2b9c3;
+  display: block;
+  margin-top: 8px;
+}
+.schedule p {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #bec8ce;
+  margin-top: 12px;
+}
+.schedule p strong {
+  display: block;
+}
+.finale .world-copy {
+  top: 28%;
+  max-width: 44%;
+}
+.finale .world-copy h2 {
+  font-size: clamp(65px, 8.2vw, 145px);
+}
+.registration-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 8px;
+  letter-spacing: 0.09em;
+  margin-top: 25px;
+  color: #f4c997;
+}
+.registration-status i,
+.chapter-status i {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.contact-link {
+  font-size: 11px;
+  display: block;
+  margin-top: 17px;
+}
+.faq {
+  position: absolute;
+  right: 9%;
+  top: 33%;
+  width: 32%;
+  padding: 25px;
+  background: #0c1217c9;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #c6a47a75;
+}
+.faq h3 {
+  margin-bottom: 20px;
+}
+.faq details {
+  border-bottom: 1px solid #bfc6ca36;
+}
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 14px 0;
+  min-height: 44px;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary span {
+  font-size: 17px;
+  color: var(--accent);
+}
+.faq details[open] summary span {
+  transform: rotate(45deg);
+}
+.faq details p {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #c1cad0;
+  padding: 0 0 15px;
+}
+.chapter-nav {
+  position: fixed;
+  z-index: 20;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chapter-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 80px;
+  min-height: 32px;
+  font-size: 8px;
+  color: #a6b0be;
+}
+.chapter-nav a > span {
+  opacity: 0.5;
+}
+.chapter-nav b {
+  font-weight: 400;
+  display: none;
+}
+.chapter-nav i {
+  width: 3px;
+  height: 19px;
+  background: #8f99a766;
+  transition:
+    height 0.3s,
+    background 0.3s;
+}
+.chapter-nav a:hover b {
+  display: block;
+}
+.chapter-nav a[aria-current] {
+  color: var(--accent);
+}
+.chapter-nav a[aria-current] > span {
+  opacity: 1;
+}
+.chapter-nav a[aria-current] i {
+  background: var(--accent);
+  height: 35px;
+}
+.journey-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 63px;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 4.5%;
+  background: linear-gradient(transparent, #080e17e0);
+}
+.chapter-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 8px;
+  letter-spacing: 0.09em;
+}
+.chapter-status b {
+  font-weight: 400;
+  color: #c4ccd3;
+  margin-left: 14px;
+  text-transform: uppercase;
+}
+.motion-control {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: transparent;
+  color: #ced5db;
+  min-height: 44px;
+  font-size: 7px;
+  letter-spacing: 0.06em;
+  padding: 8px;
+}
+.scroll-hint {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  font-size: 7px;
+  letter-spacing: 0.14em;
+  color: #b7c4d0;
+}
+.progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #acbdcd33;
+}
+.progress-track > span {
+  display: block;
+  width: var(--journey-progress);
+  height: 100%;
+  background: var(--accent);
+  transition: background 0.5s;
+}
+@media (min-width: 1800px) {
+  .intro-title {
+    left: 8%;
+    width: 85%;
+  }
+  .world-copy {
+    max-width: 47%;
+  }
+  .chapter-grid {
+    padding-left: 8%;
+  }
+}
+@media (max-height: 760px) and (min-width: 901px) {
+  .chapter-label {
+    top: 18%;
+  }
+  .world-copy {
+    top: 29%;
+  }
+  .world-copy h2,
+  .iron .world-copy h2 {
+    font-size: clamp(60px, 6.5vw, 102px);
+  }
+  .spider .world-copy h2 {
+    font-size: 7vw;
+  }
+  .hulk .world-copy h2 {
+    font-size: 8vw;
+  }
+  .world-copy > p {
+    margin-top: 17px;
+  }
+  .world-action {
+    margin-top: 17px;
+  }
+  .spider .node-detail {
+    min-height: 55px;
+    margin-top: 22px;
+  }
+  .web-nodes {
+    margin-top: 18px;
+  }
+  .chapter-footer {
+    bottom: 12%;
+  }
+  .intro-bottom {
+    bottom: 16%;
+  }
+  .mission-information {
+    top: 25%;
+  }
+  .mission-information dl > div {
+    padding: 13px 0;
+  }
+  .faq {
+    top: 28%;
+  }
+}
+@media (max-width: 1100px) {
+  .desktop-nav {
+    gap: 22px;
+  }
+  .site-header {
+    gap: 20px;
+  }
+  .world-copy {
+    max-width: 51%;
+  }
+  .world-copy h2 {
+    font-size: 8vw;
+  }
+  .chapter-grid {
+    padding-left: 6%;
+  }
+  .chapter-label,
+  .world-copy,
+  .intro-title,
+  .intro-meta,
+  .intro-bottom,
+  .chapter-footer,
+  .mission-heading {
+    left: 6%;
+  }
+  .world-insignia {
+    right: 9%;
+    width: 75px;
+  }
+  .world-insignia strong {
+    font-size: 85px;
+  }
+  .mission-information {
+    left: 54%;
+    right: 10%;
+  }
+  .mission-information dt {
+    gap: 10px;
+  }
+  .mission-information dd {
+    font-size: 9px;
+  }
+  .faq {
+    right: 10%;
+    width: 35%;
+  }
+  .world-copy > p,
+  .mission-heading > p {
+    font-size: 11px;
+  }
+  .intro-meta {
+    gap: 20px;
+  }
+  .micro {
+    font-size: 7px;
+  }
+  .artifact-caption {
+    right: 10%;
+    font-size: 7px;
+  }
+}
+@media (max-width: 900px) {
+  .site-header {
+    padding: 22px 5%;
+    gap: 18px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .nav-cta {
+    margin-left: auto;
+  }
+  .menu-toggle {
+    display: grid;
+  }
+  .chapter-nav {
+    right: 2%;
+  }
+  .chapter-nav a {
+    min-width: 25px;
+  }
+  .chapter-nav a > span {
+    display: none;
+  }
+  .chapter-nav a:hover b {
+    display: none;
+  }
+  .world-copy {
+    max-width: 55%;
+  }
+  .world-insignia {
+    top: 22%;
+  }
+  .gamma-readout {
+    top: 21%;
+    right: 8%;
+  }
+  .mission-information {
+    left: 52%;
+    right: 8%;
+  }
+  .mission-heading {
+    width: 43%;
+  }
+  .faq {
+    right: 8%;
+    width: 39%;
+  }
+  .finale .world-copy {
+    max-width: 42%;
+  }
+  .finale .world-copy h2 {
+    font-size: 8vw;
+  }
+  .intro-title strong {
+    font-size: 14vw;
+  }
+  .intro-bottom {
+    grid-template-columns: 150px 190px;
+    gap: 18px;
+  }
+  .artifact-caption {
+    bottom: 20%;
+  }
+}
+@media (max-width: 600px) {
+  .site-header {
+    padding: 17px 6%;
+    gap: 12px;
+  }
+  .brand-mark {
+    font-size: 29px;
+  }
+  .brand-copy {
+    font-size: 6px;
+    letter-spacing: 0.08em;
+  }
+  .brand-copy > span {
+    font-size: 5.5px;
+  }
+  .brand {
+    gap: 8px;
+  }
+  .nav-cta {
+    font-size: 8px;
+    padding: 10px;
+    gap: 8px;
+  }
+  .nav-cta svg {
+    width: 14px;
+  }
+  .menu-toggle {
+    width: 28px;
+  }
+  .chapter {
+    height: 185svh;
+  }
+  .assembly {
+    height: 175svh;
+  }
+  .spider {
+    height: 200svh;
+  }
+  .mission {
+    height: auto;
+    min-height: 130svh;
+  }
+  .finale {
+    height: auto;
+    min-height: 145svh;
+  }
+  .chapter-shell {
+    height: 100svh;
+    min-height: 700px;
+  }
+  .chapter-grid {
+    padding: 100px 7% 100px;
+  }
+  .scene-shade {
+    background:
+      linear-gradient(
+        180deg,
+        #070b1490,
+        transparent 52%,
+        #060c1470 85%,
+        #060c14e0
+      ),
+      linear-gradient(90deg, #080d1430, transparent);
+  }
+  .intro-meta {
+    left: 7%;
+    top: 16%;
+    display: block;
+  }
+  .intro-meta .micro {
+    display: block;
+    margin-top: 8px;
+    font-size: 6px;
+    letter-spacing: 0.12em;
+  }
+  .eyebrow {
+    font-size: 8px;
+  }
+  .intro-title {
+    left: 7%;
+    top: 25%;
+    width: 86%;
+  }
+  .intro-title h1 > span {
+    font-size: 15vw;
+    margin-bottom: 10px;
+  }
+  .intro-title strong {
+    font-size: 17.6vw;
+    letter-spacing: -0.04em;
+  }
+  .outlined {
+    -webkit-text-stroke: 0.7px #e6dfd7;
+  }
+  .intro-rule {
+    min-width: 0;
+    width: 100%;
+    font-size: 7px;
+    gap: 15px;
+    margin-top: 18px;
+    padding-top: 12px;
+  }
+  .intro-rule svg {
+    width: 13px;
+  }
+  .intro-bottom {
+    left: 7%;
+    right: 7%;
+    bottom: 13%;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 18px;
+  }
+  .intro-bottom p {
+    font-size: 11px;
+  }
+  .journey-link {
+    font-size: 9px;
+    gap: 6px;
+    padding: 9px 0;
+  }
+  .journey-link svg {
+    width: 14px;
+  }
+  .intro-bottom small {
+    font-size: 6px;
+    letter-spacing: 0.04em;
+  }
+  .artifact-caption {
+    right: 7%;
+    bottom: 27%;
+    font-size: 6px;
+  }
+  .artifact-caption small {
+    font-size: 5px;
+  }
+  .chapter-label {
+    left: 7%;
+    top: 15%;
+    font-size: 9px;
+    gap: 10px;
+  }
+  .chapter-label small {
+    font-size: 5.5px;
+  }
+  .chapter-number {
+    width: 29px;
+    height: 29px;
+    font-size: 9px;
+  }
+  .world-copy,
+  .spider .world-copy,
+  .hulk .world-copy {
+    left: 7%;
+    top: 23%;
+    width: 86%;
+    max-width: 86%;
+  }
+  .world-kicker {
+    font-size: 6px;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+  }
+  .world-copy h2,
+  .iron .world-copy h2 {
+    font-size: 14.5vw;
+    line-height: 0.91;
+  }
+  .world-copy > p {
+    font-size: 9px;
+    line-height: 1.7;
+    margin-top: 15px;
+    max-width: 75%;
+  }
+  .world-action {
+    min-height: 44px;
+    font-size: 8px;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 11px 13px;
+  }
+  .world-action svg {
+    width: 13px;
+  }
+  .world-action svg:last-child {
+    margin-left: 7px;
+  }
+  .interaction-note {
+    font-size: 5.5px;
+    margin-top: 9px;
+  }
+  .world-insignia {
+    right: 7%;
+    top: auto;
+    bottom: 20%;
+    width: 60px;
+  }
+  .world-insignia strong {
+    font-size: 56px;
+  }
+  .world-insignia span {
+    font-size: 5px;
+  }
+  .chapter-footer {
+    left: 7%;
+    right: 7%;
+    bottom: 12%;
+    font-size: 5.5px;
+    letter-spacing: 0.05em;
+    gap: 15px;
+    padding-top: 13px;
+  }
+  .chapter-footer a {
+    font-size: 8px;
+    gap: 8px;
+  }
+  .chapter-footer a svg {
+    width: 12px;
+  }
+  .chapter-nav {
+    right: 2%;
+    gap: 7px;
+    top: 60%;
+  }
+  .chapter-nav a {
+    min-height: 24px;
+    min-width: 14px;
+  }
+  .chapter-nav i {
+    height: 12px;
+    width: 2px;
+  }
+  .chapter-nav a[aria-current] i {
+    height: 22px;
+  }
+  .journey-controls {
+    height: 54px;
+    padding: 0 6%;
+    gap: 14px;
+  }
+  .chapter-status {
+    font-size: 6px;
+    gap: 6px;
+  }
+  .chapter-status b {
+    margin-left: 6px;
+    font-size: 6px;
+  }
+  .motion-control {
+    font-size: 5.5px;
+    gap: 5px;
+    padding: 3px;
+  }
+  .motion-control svg {
+    width: 10px;
+  }
+  .scroll-hint {
+    font-size: 5px;
+    letter-spacing: 0.05em;
+    gap: 6px;
+  }
+  .scroll-hint svg {
+    width: 10px;
+  }
+  .spider .world-copy {
+    transform: rotate(-2deg);
+    top: 22%;
+  }
+  .spider .world-copy h2 {
+    font-size: 15.5vw;
+  }
+  .spider .world-copy > p {
+    font-size: 9px;
+    margin-top: 12px;
+  }
+  .web-nodes {
+    margin-top: 15px;
+    max-width: 300px;
+    gap: 8px;
+  }
+  .web-nodes button {
+    font-size: 9px;
+    padding: 11px 10px;
+    gap: 7px;
+    min-height: 44px;
+  }
+  .web-nodes button span {
+    font-size: 6px;
+  }
+  .node-detail {
+    max-width: 75%;
+    margin-top: 20px;
+    min-height: 60px;
+  }
+  .node-detail > span {
+    font-size: 8px;
+  }
+  .node-detail p {
+    font-size: 8px;
+    line-height: 1.6;
+  }
+  .spider .interaction-note {
+    font-size: 4.8px;
+  }
+  .city-coordinate {
+    right: 7%;
+    bottom: 21%;
+    font-size: 29px;
+  }
+  .city-coordinate span {
+    font-size: 5px;
+  }
+  .hulk .world-copy h2 {
+    font-size: 19vw;
+    line-height: 0.84;
+  }
+  .hulk .world-kicker {
+    font-size: 6px;
+  }
+  .gamma-readout {
+    right: 7%;
+    top: auto;
+    bottom: 22%;
+  }
+  .gamma-readout strong {
+    font-size: 55px;
+  }
+  .gamma-readout small {
+    font-size: 6px;
+  }
+  .gamma-readout span {
+    font-size: 4.5px;
+    max-width: 100px;
+    line-height: 1.6;
+  }
+  .mission .chapter-shell,
+  .finale .chapter-shell {
+    position: relative;
+    height: auto;
+    min-height: 130svh;
+    overflow: visible;
+  }
+  .mission .chapter-grid,
+  .finale .chapter-grid {
+    padding-top: 135px;
+    padding-bottom: 140px;
+    min-height: 130svh;
+  }
+  .mission .chapter-label,
+  .finale .chapter-label {
+    position: static;
+    margin-bottom: 30px;
+  }
+  .mission-heading,
+  .finale .world-copy {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+  .mission-heading h2,
+  .finale .world-copy h2 {
+    font-size: 15vw;
+  }
+  .mission-heading > p {
+    font-size: 10px;
+    max-width: 100%;
+    margin-top: 17px;
+  }
+  .mission-information {
+    position: static;
+    padding: 0;
+    background: #0b1823b0;
+  }
+  .mission-information dl > div {
+    padding: 15px 8px;
+  }
+  .mission-information dt {
+    font-size: 10px;
+  }
+  .mission-information dd {
+    font-size: 9px;
+  }
+  .schedule {
+    padding: 0 8px;
+    margin-top: 22px;
+  }
+  .schedule h3 {
+    font-size: 8px;
+  }
+  .schedule p {
+    font-size: 9px;
+  }
+  .mission .chapter-footer,
+  .finale .chapter-footer {
+    bottom: 80px;
+  }
+  .finale .chapter-grid {
+    min-height: 145svh;
+  }
+  .finale .world-copy > p {
+    max-width: 85%;
+    font-size: 10px;
+  }
+  .registration-status {
+    font-size: 6px;
+  }
+  .faq {
+    position: static;
+    width: 100%;
+    padding: 20px;
+    background: #0c1217df;
+  }
+  .faq summary {
+    font-size: 10px;
+  }
+  .faq details p {
+    font-size: 9px;
+  }
+  .finale .chapter-footer > span {
+    max-width: 110px;
+    line-height: 1.7;
+  }
+  .fallback-orbit {
+    right: 15%;
+    top: 40%;
+    height: 37vh;
+  }
+  .fallback-core {
+    right: 42%;
+    top: 53%;
+    width: 9vh;
+    height: 9vh;
+  }
+  .scene-fallback span {
+    font-size: 6px;
+    bottom: 25%;
+  }
+}
+@media (max-width: 375px) {
+  .brand-copy {
+    display: none;
+  }
+  .world-copy h2,
+  .iron .world-copy h2 {
+    font-size: 14vw;
+  }
+  .intro-bottom {
+    gap: 12px;
+  }
+  .chapter-status b {
+    display: none;
+  }
+  .world-copy > p {
+    max-width: 86%;
+  }
+}
+@media (min-width: 601px) and (max-height: 760px) {
+  .spider .world-copy {
+    top: 26%;
+  }
+  .spider .world-copy h2 {
+    font-size: 6.2vw;
+  }
+  .spider .world-copy > p {
+    margin-top: 15px;
+  }
+  .spider .node-detail {
+    min-height: 42px;
+    margin-top: 22px;
+  }
+  .spider .interaction-note {
+    margin-top: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .world-copy > p,
+  .spider .world-copy > p {
+    font-size: 11px;
+  }
+  .world-action {
+    font-size: 10px;
+  }
+  .node-detail > span {
+    font-size: 10px;
+  }
+  .node-detail p {
+    font-size: 10px;
+  }
+  .node-detail {
+    min-height: 70px;
+  }
+  .web-nodes button {
+    font-size: 11px;
+  }
+  .interaction-note,
+  .spider .interaction-note {
+    font-size: 6px;
+  }
+  .mission-information dt {
+    font-size: 12px;
+  }
+  .mission-information dd {
+    font-size: 11px;
+  }
+  .mission-heading > p,
+  .finale .world-copy > p {
+    font-size: 12px;
+  }
+  .schedule p,
+  .faq details p {
+    font-size: 11px;
+  }
+  .faq summary {
+    font-size: 12px;
+  }
+  .chapter-footer a {
+    font-size: 9px;
+  }
+  .journey-link {
+    font-size: 10px;
+  }
+  .intro-bottom p {
+    font-size: 12px;
+  }
+  .chapter-controls {
+    font-size: 8px;
+  }
+}
+.afterword {
+  position: relative;
+  min-height: 85svh;
+  padding: 100px 7.5% 140px;
+  background: linear-gradient(#07111ae6, #07111af7);
+}
+.afterword .faq {
+  position: static;
+  width: min(100%, 780px);
+  margin: 0 auto;
+  padding: 45px;
+  background: transparent;
+  border-top: 1px solid #eac18c70;
+  backdrop-filter: none;
+}
+.afterword .faq h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(45px, 5vw, 78px);
+  margin: 18px 0 25px;
+  line-height: 1;
+}
+.afterword .faq summary {
+  font-size: 14px;
+  padding: 20px 0;
+}
+.afterword .faq details p {
+  font-size: 13px;
+  max-width: 580px;
+  line-height: 1.8;
+}
+.afterword .contact-link {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 30px;
+  color: var(--accent);
+}
+@media (max-width: 600px) {
+  .finale .chapter-shell,
+  .finale .chapter-grid {
+    height: 100svh;
+    min-height: 700px;
+  }
+  .finale {
+    min-height: 125svh;
+  }
+  .afterword {
+    padding: 75px 7% 110px;
+    min-height: 90svh;
+  }
+  .afterword .faq {
+    padding: 20px 0;
+  }
+  .afterword .faq summary {
+    font-size: 13px;
+  }
+  .afterword .faq details p {
+    font-size: 12px;
+  }
+  .finale .world-copy {
+    position: absolute;
+    left: 7%;
+    top: 25%;
+    max-width: 86%;
+  }
+  .finale .chapter-label {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+  }
+  .finale .chapter-footer {
+    bottom: 12%;
+  }
+}
+.assembly,
+.finale {
+  --accent: #f3b778;
+}
+.iron {
+  --accent: #84e5ec;
+}
+.spider {
+  --accent: #ec6262;
+}
+.hulk {
+  --accent: #b4f37b;
+}
+.mission {
+  --accent: #b9dbe5;
+}
+.contact-status {
+  font-size: 9px;
+  color: #c1cad2;
+  margin-top: 16px;
+  letter-spacing: 0.06em;
+}
+.contact-status a {
+  color: var(--accent);
+}
+.armor-gesture-guide { margin-top: 28px; max-width: 380px; padding: 14px 0; }
+.armor-gesture-guide:focus-visible { outline: 2px solid #84e5ec; outline-offset: 6px; }
+.armor-gesture-title { display: flex; gap: 12px; align-items: center; color: #84e5ec; font-size: 16px; }
+.armor-gesture-guide p { color: #d4e0e5; margin-top: 8px; font-size: 14px; line-height: 1.5; }
+.armor-gesture-guide small { display: block; margin-top: 14px; color: #adc2cb; font-size: 10px; letter-spacing: .06em; }
+.armor-keyboard-controls { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+.armor-gesture-guide:focus-within .armor-keyboard-controls { position: relative; width: 100%; height: auto; clip-path: none; overflow: visible; margin-top: 14px; padding: 14px; background: #0b1620; border: 1px solid #607984; }
+.armor-keyboard-controls label { display: block; margin: 8px 0; font-size: 13px; }
+.armor-keyboard-controls select, .armor-keyboard-controls input { width: 100%; min-height: 44px; font: inherit; color: #eeeee8; background: #152631; padding: 8px; }
+.armor-keyboard-controls :focus-visible { outline: 2px solid #84e5ec; outline-offset: 3px; }
+/* Keep the exhibition in the periphery; event facts need a quiet, opaque reading surface. */
+.mission .chapter-shell { background: linear-gradient(90deg, #071019f2 0%, #071019e8 46%, #071019cc 100%); }
+.mission .mission-information { background: #0b1824f5; padding: 20px 24px 24px; border: 1px solid #526776; }
+.mission .mission-information dt { font-size: 15px; color: #eeeee8; }
+.mission .mission-information dt small { font-size: 12px; color: #b9dbe5; }
+.mission .mission-information dd { font-size: 14px; color: #d7e7ef; }
+.mission .schedule h3 { font-size: 13px; line-height: 1.5; }
+.mission .schedule h3 span { font-size: 11px; color: #c4d3df; }
+.mission .schedule p { font-size: 14px; line-height: 1.65; color: #d2e0e8; }
+.mission .contact-status { font-size: 13px; color: #d7e7ef; }
+.mission .mission-heading > p { font-size: 16px; line-height: 1.7; color: #d2e0e8; }
+.experience[data-world="4"] .journey-controls { background: #071019; }
+@media(max-width:1023px) {
+ .iron[data-inspecting="true"] .armor-gesture-guide { margin-top: 0; padding: 8px 0; }
+ .iron[data-inspecting="true"] .armor-gesture-guide small { display: none; }
+ .iron[data-inspecting="true"] .armor-gesture-title { font-size: 14px; }
+ .iron[data-inspecting="true"] .armor-gesture-guide p { font-size: 12px; }
+}
+@media(max-width:600px) {
+ .mission .mission-information { padding: 14px; }
+ .mission .mission-information dl > div { padding: 14px 0; gap: 12px; }
+ .mission .mission-information dt { font-size: 14px; gap: 10px; }
+ .mission .mission-information dd { font-size: 13px; max-width: 45%; }
+ .mission .schedule { padding: 0; }
+ .mission .mission-heading > p { font-size: 15px; }
+ .mission .contact-status { padding: 0; }
+}
+.experience .gamma-readout { top: auto; bottom: 18%; }
+.experience .gamma-readout strong { font-size: 48px; }
+@media(max-width:600px) {
+ .experience .scene-shade { background: linear-gradient(180deg,#070b14dd,#070b1480 52%,transparent 72%,#060c14db),linear-gradient(90deg,#080d1440,transparent); }
+ .experience .gamma-readout strong { font-size: 32px; }
+ .experience .nav-cta { min-height: 44px; }
+ .experience .menu-toggle { min-width: 44px; width: 44px; }
+}
+.intro-title h1.official-title {
+  font-size: clamp(80px, 13vw, 230px);
+  line-height: 0.9;
+  max-width: 80%;
+  overflow-wrap: anywhere;
+}
+.iron .world-copy {
+  translate: calc(var(--chapter-drift, 0) * -18px) 0;
+}
+.spider .world-copy {
+  rotate: calc(var(--chapter-drift, 0) * -2deg);
+}
+.hulk .world-copy h2 {
+  translate: 0 calc(var(--chapter-drift, 0) * -12px);
+}
+@media (max-width: 600px) {
+  .city-coordinate {
+    display: none;
+  }
+  .contact-status {
+    font-size: 10px;
+    padding: 0 8px;
+  }
+  .intro-title h1.official-title {
+    font-size: 18vw;
+    max-width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *:before,
+  *:after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .spider .world-copy {
+    transform: none;
+  }
+  .world-copy,
+  .world-copy h2 {
+    translate: none !important;
+    rotate: none !important;
+  }
+  .fallback-orbit {
+    transform: none;
+  }
+}

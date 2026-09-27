@@ -1,0 +1,12 @@
+node_modules/
+.next/
+test-results/
+playwright-report/
+*.tsbuildinfo
+.env*
+.vercel/
+asset-sources/model/*.blend
+asset-sources/model/*.fbx
+asset-sources/model/*.obj
+asset-sources/model/*.mtl
+asset-sources/model/*.blend1
