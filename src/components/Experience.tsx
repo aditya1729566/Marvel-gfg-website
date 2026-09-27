@@ -174,6 +174,11 @@ export default function Experience() {
     };
     window.addEventListener("pointermove", pointer, { passive: true });
     window.addEventListener("resize", refresh, { passive: true });
+    // Media preferences and content/font changes can resize chapters without
+    // resizing the viewport. Keep the cached scroll boundaries in sync.
+    const layoutObserver = new ResizeObserver(refresh);
+    sections.forEach(section => layoutObserver.observe(section));
+    layoutObserver.observe(portalSection);
     update();
     const deepLink = requestAnimationFrame(() => {
       const id = window.location.hash.slice(1);
@@ -186,6 +191,7 @@ export default function Experience() {
       cancelAnimationFrame(deepLink);
       window.removeEventListener("pointermove", pointer);
       window.removeEventListener("resize", refresh);
+      layoutObserver.disconnect();
     };
   }, []);
   useEffect(() => {

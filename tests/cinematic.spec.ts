@@ -38,6 +38,15 @@ test("Strange has a dedicated, reversible portal interval with an accessible ski
  await expect(page.locator("canvas")).toHaveCount(1);
  const accessibility=await new AxeBuilder({page}).withTags(["wcag2a","wcag2aa","wcag21aa"]).analyze();
  expect(accessibility.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
+ await page.emulateMedia({reducedMotion:"no-preference"});
+ await expect(page.locator(".experience")).toHaveAttribute("data-reduced","false");
+ for(const phase of [.25,.65]){
+  await page.evaluate(phase=>{const s=document.getElementById("doctor-strange")!;window.scrollTo({top:s.offsetTop+s.offsetHeight*phase,behavior:"instant"});},phase);
+  await expect(page.locator(".experience")).toHaveAttribute("data-passage","strange");
+ }
+ await page.getByRole("link",{name:"Skip to mission",exact:true}).click();
+ await expect(page.locator("#mission")).toHaveAttribute("data-current","true");
+ await expect(page.locator(".dossier-header")).toBeVisible();
  expect(errors).toEqual([]);
 });
 
